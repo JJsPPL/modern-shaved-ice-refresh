@@ -1,5 +1,5 @@
 
-import { styles } from './ShavedIceStyles';
+import { styles } from './styles';
 import { setupEventListeners } from './ShavedIceScripts';
 import { getFullPageTemplate } from './template/PageTemplate';
 
