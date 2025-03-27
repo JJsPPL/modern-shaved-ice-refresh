@@ -3,8 +3,14 @@ import React, { useEffect } from 'react';
 
 const ShavedIcePage: React.FC = () => {
   useEffect(() => {
-    // Inject the HTML content directly into the DOM
-    const htmlContent = `
+    // Create a container to hold the HTML content before injection
+    const container = document.createElement('div');
+    container.className = 'shaved-ice-container';
+    container.style.cssText = 'width: 100%; height: 100%;';
+    document.body.appendChild(container);
+    
+    // Inject the HTML content directly into the container
+    container.innerHTML = `
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -870,29 +876,38 @@ const ShavedIcePage: React.FC = () => {
 </html>
     `;
     
-    // Create a div to hold the HTML content
-    const container = document.createElement('div');
-    container.innerHTML = htmlContent;
-    document.body.appendChild(container);
-    
-    // Apply styles to hide React app elements
+    // Apply styles to make the component take the full screen
     const rootElement = document.getElementById('root');
     if (rootElement) {
       rootElement.style.display = 'none';
     }
     
+    // Making sure the container fills the page
+    document.documentElement.style.height = '100%';
+    document.body.style.height = '100%';
+    document.body.style.margin = '0';
+    document.body.style.padding = '0';
+    document.body.style.overflow = 'auto';
+    
     return () => {
       // Cleanup when component unmounts
-      if (container) {
+      if (container && document.body.contains(container)) {
         document.body.removeChild(container);
       }
       if (rootElement) {
         rootElement.style.display = 'block';
       }
+      // Restore original body styles
+      document.documentElement.style.height = '';
+      document.body.style.height = '';
+      document.body.style.margin = '';
+      document.body.style.padding = '';
+      document.body.style.overflow = '';
     };
   }, []);
 
-  return null; // This component doesn't render anything in the React tree
+  // Return an empty div as a React component placeholder
+  return <div id="shaved-ice-page" style={{ display: 'none' }} />;
 };
 
 export default ShavedIcePage;
