@@ -1,15 +1,20 @@
+
 import React, { useEffect } from 'react';
 
 const ShavedIcePage: React.FC = () => {
   useEffect(() => {
-    // Create a container to hold the HTML content before injection
-    const container = document.createElement('div');
-    container.className = 'shaved-ice-container';
-    container.style.cssText = 'width: 100%; height: 100%;';
-    document.body.appendChild(container);
-    
-    // Inject the HTML content directly into the container
-    container.innerHTML = `
+    // Get the root element to ensure we're working with it properly
+    const rootElement = document.getElementById('root');
+    if (rootElement) {
+      rootElement.innerHTML = ''; // Clear any existing content
+      rootElement.style.margin = '0';
+      rootElement.style.padding = '0';
+      rootElement.style.height = '100vh';
+      rootElement.style.width = '100%';
+      rootElement.style.display = 'block';
+      
+      // Inject the HTML content directly into the root element
+      rootElement.innerHTML = `
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,12 +24,6 @@ const ShavedIcePage: React.FC = () => {
   <meta name="keywords" content="shaved ice, bingsu, desserts, events, fiesta plates, food, gourmet desserts, Oregon"/>
   <meta name="author" content="Jonathan Pablo"/>
   <title>JJ's Shaved Ice | Premium Frozen Treats & Delights</title>
-
-  <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&family=Lobster&display=swap"
-    rel="stylesheet"
-  />
 
   <style>
     /* Modern CSS Reset & Base Styles */
@@ -63,6 +62,8 @@ const ShavedIcePage: React.FC = () => {
       min-height: 100vh;
       display: grid;
       grid-template-columns: 280px 1fr;
+      margin: 0;
+      padding: 0;
     }
 
     h1, h2, h3, h4, h5 {
@@ -871,42 +872,15 @@ const ShavedIcePage: React.FC = () => {
       }
     });
   </script>
-</body>
-</html>
-    `;
-    
-    // Apply styles to make the component take the full screen
-    const rootElement = document.getElementById('root');
-    if (rootElement) {
-      rootElement.style.display = 'none';
+      `;
     }
     
-    // Making sure the container fills the page
-    document.documentElement.style.height = '100%';
-    document.body.style.height = '100%';
-    document.body.style.margin = '0';
-    document.body.style.padding = '0';
-    document.body.style.overflow = 'auto';
-    
-    return () => {
-      // Cleanup when component unmounts
-      if (container && document.body.contains(container)) {
-        document.body.removeChild(container);
-      }
-      if (rootElement) {
-        rootElement.style.display = 'block';
-      }
-      // Restore original body styles
-      document.documentElement.style.height = '';
-      document.body.style.height = '';
-      document.body.style.margin = '';
-      document.body.style.padding = '';
-      document.body.style.overflow = '';
-    };
+    // Cleanup function not needed since we're using the root element
+    return () => {};
   }, []);
 
-  // Return an empty div as a React component placeholder
-  return <div id="shaved-ice-page" style={{ display: 'none' }} />;
+  // This component doesn't need to render anything itself as we're injecting content directly into root
+  return null;
 };
 
 export default ShavedIcePage;
