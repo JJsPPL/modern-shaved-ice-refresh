@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 
 const ShavedIcePage: React.FC = () => {
@@ -599,7 +598,7 @@ const ShavedIcePage: React.FC = () => {
   <!-- Sidebar Navigation -->
   <aside class="sidebar">
     <div class="logo-container">
-      <img src="2JJ.jpg" alt="JJ's Shaved Ice Logo" class="logo">
+      <img src="https://placehold.co/120x120/3e92cc/ffffff?text=JJ%27s" alt="JJ's Shaved Ice Logo" class="logo">
       <h1>JJ's Shaved Ice</h1>
       <p class="tagline">Premium Frozen Delights</p>
     </div>
@@ -617,7 +616,7 @@ const ShavedIcePage: React.FC = () => {
   <main class="content">
     <!-- Hero Section -->
     <section class="hero-section">
-      <img src="JJflyer.jpg" alt="JJ's Shaved Ice Experience" class="hero clickable">
+      <img src="https://placehold.co/800x400/3e92cc/ffffff?text=JJ%27s+Shaved+Ice+Experience" alt="JJ's Shaved Ice Experience" class="hero clickable">
     </section>
 
     <!-- Intro Section -->
@@ -633,59 +632,59 @@ const ShavedIcePage: React.FC = () => {
       <h2>Our Signature Menu</h2>
       <div class="menu-grid">
         <div class="menu-item">
-          <img src="Blueberry Shaved Ice.jpeg" alt="Blueberry Shaved Ice" class="menu-img clickable">
+          <img src="https://placehold.co/200x180/3e92cc/ffffff?text=Blueberry" alt="Blueberry Shaved Ice" class="menu-img clickable">
           <div class="menu-caption">Blueberry Shaved Ice</div>
         </div>
         <div class="menu-item">
-          <img src="Strawberry Shaved Ice.jpeg" alt="Strawberry Shaved Ice" class="menu-img clickable">
+          <img src="https://placehold.co/200x180/ff6b6b/ffffff?text=Strawberry" alt="Strawberry Shaved Ice" class="menu-img clickable">
           <div class="menu-caption">Strawberry Shaved Ice</div>
         </div>
         <div class="menu-item">
-          <img src="Lime Shaved Ice.jpeg" alt="Lime Shaved Ice" class="menu-img clickable">
+          <img src="https://placehold.co/200x180/4caf50/ffffff?text=Lime" alt="Lime Shaved Ice" class="menu-img clickable">
           <div class="menu-caption">Lime Shaved Ice</div>
         </div>
         <div class="menu-item">
-          <img src="Mango Bingsu.jpeg" alt="Mango Bingsu" class="menu-img clickable">
+          <img src="https://placehold.co/200x180/ffc107/ffffff?text=Mango" alt="Mango Bingsu" class="menu-img clickable">
           <div class="menu-caption">Mango Bingsu</div>
         </div>
         <div class="menu-item">
-          <img src="Cotton Candy Bingsu.jpeg" alt="Cotton Candy Bingsu" class="menu-img clickable">
+          <img src="https://placehold.co/200x180/e91e63/ffffff?text=Cotton+Candy" alt="Cotton Candy Bingsu" class="menu-img clickable">
           <div class="menu-caption">Cotton Candy Bingsu</div>
         </div>
         <div class="menu-item">
-          <img src="Strawberry Bingsu.jpeg" alt="Strawberry Bingsu" class="menu-img clickable">
+          <img src="https://placehold.co/200x180/ff6b6b/ffffff?text=Strawberry" alt="Strawberry Bingsu" class="menu-img clickable">
           <div class="menu-caption">Strawberry Bingsu</div>
         </div>
         <div class="menu-item">
-          <img src="Chocolate Banana Craffle.jpeg" alt="Chocolate Banana Craffle" class="menu-img clickable">
+          <img src="https://placehold.co/200x180/795548/ffffff?text=Chocolate" alt="Chocolate Banana Craffle" class="menu-img clickable">
           <div class="menu-caption">Chocolate Banana Craffle</div>
         </div>
         <div class="menu-item">
-          <img src="Oreo Craffle.jpeg" alt="Oreo Craffle" class="menu-img clickable">
+          <img src="https://placehold.co/200x180/607d8b/ffffff?text=Oreo" alt="Oreo Craffle" class="menu-img clickable">
           <div class="menu-caption">Oreo Craffle</div>
         </div>
         <div class="menu-item">
-          <img src="Strawberry Craffle.jpeg" alt="Strawberry Craffle" class="menu-img clickable">
+          <img src="https://placehold.co/200x180/ff6b6b/ffffff?text=Strawberry" alt="Strawberry Craffle" class="menu-img clickable">
           <div class="menu-caption">Strawberry Craffle</div>
         </div>
         <div class="menu-item">
-          <img src="Calamanci Lemonade.jpeg" alt="Calamanci Lemonade" class="menu-img clickable">
+          <img src="https://placehold.co/200x180/ffc107/ffffff?text=Calamanci" alt="Calamanci Lemonade" class="menu-img clickable">
           <div class="menu-caption">Calamanci Lemonade</div>
         </div>
         <div class="menu-item">
-          <img src="Pickled Eggs.jpeg" alt="Pickled Eggs" class="menu-img clickable">
+          <img src="https://placehold.co/200x180/9c27b0/ffffff?text=Pickled+Eggs" alt="Pickled Eggs" class="menu-img clickable">
           <div class="menu-caption">Pickled Eggs</div>
         </div>
         <div class="menu-item">
-          <img src="Pickled Papaya.jpeg" alt="Pickled Papaya" class="menu-img clickable">
+          <img src="https://placehold.co/200x180/ff9800/ffffff?text=Pickled+Papaya" alt="Pickled Papaya" class="menu-img clickable">
           <div class="menu-caption">Pickled Papaya</div>
         </div>
         <div class="menu-item">
-          <img src="Fiesta Plate Chicken.jpeg" alt="Fiesta Plate BBQ Chicken" class="menu-img clickable">
+          <img src="https://placehold.co/200x180/8bc34a/ffffff?text=BBQ+Chicken" alt="Fiesta Plate BBQ Chicken" class="menu-img clickable">
           <div class="menu-caption">Fiesta Plate BBQ Chicken</div>
         </div>
         <div class="menu-item">
-          <img src="Fiesta Plate Briskett.jpeg" alt="Fiesta Plate Smoked Brisket" class="menu-img clickable">
+          <img src="https://placehold.co/200x180/795548/ffffff?text=Smoked+Brisket" alt="Fiesta Plate Smoked Brisket" class="menu-img clickable">
           <div class="menu-caption">Fiesta Plate Smoked Brisket</div>
         </div>
       </div>
@@ -698,12 +697,12 @@ const ShavedIcePage: React.FC = () => {
         We bring the joy of premium frozen treats to events all across Oregon. Take a look at some of our favorite moments!
       </p>
       <div class="events-grid">
-        <img src="IMG_6170.jpeg" alt="JJ's Event Booth Setup" class="event-img clickable">
-        <img src="IMG_6171.jpeg" alt="Happy Customers at JJ's" class="event-img clickable">
-        <img src="IMG_6175.jpeg" alt="JJ's Colorful Booth Display" class="event-img clickable">
-        <img src="IMG_6191.jpeg" alt="Serving Our Delicious Treats" class="event-img clickable">
-        <img src="IMG_6194.jpeg" alt="Community Event Highlights" class="event-img clickable">
-        <img src="IMG_6195.jpeg" alt="JJ's Special Event Moments" class="event-img clickable">
+        <img src="https://placehold.co/300x200/3e92cc/ffffff?text=Event+1" alt="JJ's Event Booth Setup" class="event-img clickable">
+        <img src="https://placehold.co/300x200/ff6b6b/ffffff?text=Event+2" alt="Happy Customers at JJ's" class="event-img clickable">
+        <img src="https://placehold.co/300x200/4caf50/ffffff?text=Event+3" alt="JJ's Colorful Booth Display" class="event-img clickable">
+        <img src="https://placehold.co/300x200/ffc107/ffffff?text=Event+4" alt="Serving Our Delicious Treats" class="event-img clickable">
+        <img src="https://placehold.co/300x200/9c27b0/ffffff?text=Event+5" alt="Community Event Highlights" class="event-img clickable">
+        <img src="https://placehold.co/300x200/607d8b/ffffff?text=Event+6" alt="JJ's Special Event Moments" class="event-img clickable">
       </div>
     </section>
 
