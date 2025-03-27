@@ -22,14 +22,25 @@ export const injectShavedIceContent = (): void => {
   // Inject the HTML content directly into the body element
   document.body.innerHTML = getFullPageTemplate(styles, setupEventListeners);
   
-  // Add cache-busting to images
+  // Add cache-busting to images and fix paths for GitHub Pages
   setTimeout(() => {
     const images = document.querySelectorAll('img');
     images.forEach(img => {
+      // Fix the image path for GitHub Pages - ensure it has the correct base path
+      if (img.src.includes('/') && !img.src.includes('http')) {
+        // Extract the filename from the path
+        const filename = img.src.split('/').pop();
+        if (filename) {
+          // Set the correct path for GitHub Pages
+          img.src = `./${filename}`;
+        }
+      }
+      
+      // Add cache-busting parameter
       if (!img.src.includes('?')) {
         img.src = img.src + cacheBuster;
       }
     });
-    console.log(`Applied cache-busting to ${images.length} images`);
+    console.log(`Applied path fixing and cache-busting to ${images.length} images`);
   }, 100);
 };
