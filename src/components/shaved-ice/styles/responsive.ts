@@ -11,10 +11,6 @@ export const responsiveStyles = `
   }
 
   @media (max-width: 768px) {
-    body {
-      grid-template-columns: 1fr;
-    }
-
     .sidebar {
       position: relative;
       height: auto;
@@ -40,7 +36,7 @@ export const responsiveStyles = `
     }
 
     .content {
-      grid-column: 1;
+      margin-left: 0; /* Remove margin for mobile */
     }
 
     .section {
@@ -82,3 +78,4 @@ export const responsiveStyles = `
     }
   }
 `;
+

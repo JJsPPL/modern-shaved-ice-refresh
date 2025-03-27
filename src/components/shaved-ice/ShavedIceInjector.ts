@@ -14,7 +14,9 @@ export const injectShavedIceContent = (): void => {
   document.body.style.height = '100vh';
   document.body.style.width = '100%';
   document.body.style.display = 'block';
+  document.body.style.overflow = 'auto'; // Ensure scrolling works properly
   
   // Inject the HTML content directly into the body element
   document.body.innerHTML = getFullPageTemplate(styles, setupEventListeners);
 };
+

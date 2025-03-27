@@ -76,10 +76,15 @@ export const layoutStyles = `
 
   /* Main Content Container */
   .content {
-    grid-column: 2;
+    margin-left: 280px; /* Match the sidebar width */
     padding: 2rem;
     background: var(--white);
     min-height: 100vh;
     box-shadow: inset var(--shadow-sm);
   }
+
+  body {
+    display: block; /* Override the grid layout */
+  }
 `;
+
