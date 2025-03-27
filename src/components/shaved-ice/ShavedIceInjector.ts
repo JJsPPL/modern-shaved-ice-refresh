@@ -16,7 +16,20 @@ export const injectShavedIceContent = (): void => {
   document.body.style.display = 'block';
   document.body.style.overflow = 'auto'; // Ensure scrolling works properly
   
+  // Set a cache-busting parameter
+  const cacheBuster = `?v=${Date.now()}`;
+  
   // Inject the HTML content directly into the body element
   document.body.innerHTML = getFullPageTemplate(styles, setupEventListeners);
+  
+  // Add cache-busting to images
+  setTimeout(() => {
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+      if (!img.src.includes('?')) {
+        img.src = img.src + cacheBuster;
+      }
+    });
+    console.log(`Applied cache-busting to ${images.length} images`);
+  }, 100);
 };
-

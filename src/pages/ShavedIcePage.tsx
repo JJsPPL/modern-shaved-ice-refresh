@@ -4,6 +4,12 @@ import { injectShavedIceContent } from '../components/shaved-ice/ShavedIceInject
 
 const ShavedIcePage: React.FC = () => {
   useEffect(() => {
+    // Force a clean-up of any existing content
+    document.body.innerHTML = '';
+    
+    // Add a version timestamp to prevent caching issues
+    console.log("Loading shaved ice content, version: " + new Date().toISOString());
+    
     // Prepare the body element and inject content
     injectShavedIceContent();
     
