@@ -1,20 +1,17 @@
-
 import React, { useEffect } from 'react';
 
 const ShavedIcePage: React.FC = () => {
   useEffect(() => {
-    // Get the root element to ensure we're working with it properly
-    const rootElement = document.getElementById('root');
-    if (rootElement) {
-      rootElement.innerHTML = ''; // Clear any existing content
-      rootElement.style.margin = '0';
-      rootElement.style.padding = '0';
-      rootElement.style.height = '100vh';
-      rootElement.style.width = '100%';
-      rootElement.style.display = 'block';
-      
-      // Inject the HTML content directly into the root element
-      rootElement.innerHTML = `
+    // Force document.body to be the target instead of #root for GitHub Pages compatibility
+    document.body.innerHTML = '';
+    document.body.style.margin = '0';
+    document.body.style.padding = '0';
+    document.body.style.height = '100vh';
+    document.body.style.width = '100%';
+    document.body.style.display = 'block';
+    
+    // Inject the HTML content directly into the body element
+    document.body.innerHTML = `
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -873,13 +870,12 @@ const ShavedIcePage: React.FC = () => {
     });
   </script>
       `;
-    }
     
-    // Cleanup function not needed since we're using the root element
+    // Cleanup function not needed since we're using the body element directly
     return () => {};
   }, []);
 
-  // This component doesn't need to render anything itself as we're injecting content directly into root
+  // This component doesn't need to render anything itself as we're injecting content directly
   return null;
 };
 
