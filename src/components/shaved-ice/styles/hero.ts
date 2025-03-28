@@ -30,7 +30,6 @@ export const heroStyles = `
   /* Logo styling */
   .logo-option {
     cursor: pointer;
-    border: 2px solid transparent;
     border-radius: 8px;
     padding: 5px;
     margin-bottom: 10px;
@@ -43,15 +42,10 @@ export const heroStyles = `
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
   
-  .logo-option.selected {
-    border-color: var(--accent);
-    box-shadow: 0 0 12px var(--accent-translucent);
-  }
-  
   .logo-svg {
     width: 100%;
     height: auto;
-    max-width: 120px;
+    max-width: 200px;
     display: block;
     margin: 0 auto;
   }

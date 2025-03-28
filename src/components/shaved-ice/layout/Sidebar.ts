@@ -8,7 +8,7 @@ export function getSidebarHTML(): string {
   <aside class="sidebar">
     <div class="logo-container">
       <!-- Modified Bull Shield Logo -->
-      <div class="logo-option selected" data-logo="1">
+      <div class="logo-option">
         <svg class="logo-svg" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <linearGradient id="bull-gradient" x1="0%" y1="0%" x2="100%" y2="100%">

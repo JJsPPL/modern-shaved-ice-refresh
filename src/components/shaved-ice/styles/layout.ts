@@ -27,19 +27,13 @@ export const layoutStyles = `
 
   /* Logo Options Styling */
   .logo-option {
-    width: 160px;
-    height: 160px;
+    width: 200px;
+    height: 200px;
     margin: 0 auto 1rem;
     cursor: pointer;
     border-radius: 50%;
     padding: 5px;
     transition: var(--transition);
-    border: 4px solid rgba(255, 255, 255, 0.1);
-  }
-
-  .logo-option.selected {
-    border: 4px solid rgba(255, 255, 255, 0.8);
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
   }
   
   .logo-option:hover {
