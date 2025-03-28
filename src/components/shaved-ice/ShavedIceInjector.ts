@@ -39,7 +39,7 @@ export const injectShavedIceContent = (): void => {
  */
 function setupImageLightbox(): void {
   const modal = document.getElementById('image-modal');
-  const modalImg = document.getElementById('modal-img');
+  const modalImg = document.getElementById('modal-img') as HTMLImageElement | null;
   const clickableImages = document.querySelectorAll('.clickable');
   
   if (!modal || !modalImg) {
@@ -53,8 +53,12 @@ function setupImageLightbox(): void {
   clickableImages.forEach((img: Element) => {
     if (img instanceof HTMLImageElement) {
       img.onclick = function() {
-        modal.classList.add('active');
-        modalImg.src = this.src;
+        if (modal) {
+          modal.classList.add('active');
+        }
+        if (modalImg) {
+          modalImg.src = this.src;
+        }
       };
       console.log(`Set up lightbox for image: ${img.src}`);
     } else {
