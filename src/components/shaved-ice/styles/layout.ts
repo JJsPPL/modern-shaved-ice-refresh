@@ -22,6 +22,34 @@ export const layoutStyles = `
   .logo-container {
     margin-bottom: 2rem;
     text-align: center;
+    position: relative;
+  }
+
+  /* Logo Options Styling */
+  .logo-option {
+    width: 160px;
+    height: 160px;
+    margin: 0 auto 1rem;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 5px;
+    transition: var(--transition);
+    border: 4px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .logo-option.selected {
+    border: 4px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+  }
+  
+  .logo-option:hover {
+    transform: scale(1.05);
+  }
+  
+  .logo-svg {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
   }
 
   .sidebar img.logo {
@@ -34,6 +62,7 @@ export const layoutStyles = `
     margin: 0 auto 1rem;
     box-shadow: var(--shadow-sm);
     transition: var(--transition);
+    display: none; /* Hide the original image since we're using SVG logos */
   }
 
   .sidebar h1 {
@@ -88,4 +117,3 @@ export const layoutStyles = `
     display: block; /* Override the grid layout */
   }
 `;
-
