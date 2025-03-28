@@ -9,87 +9,59 @@ export function getMenuSectionHTML(): string {
       <h2>Our Signature Menu</h2>
       <div class="menu-grid">
         <div class="menu-item">
-          <div style="background-color: #3e92cc; color: white; display: flex; align-items: center; justify-content: center; height: 180px; border-radius: 8px;" class="menu-img clickable">
-            <span style="font-size: 1.5rem; font-weight: bold;">Blueberry</span>
-          </div>
+          <img src="https://github.com/JJsPPL/modern-shaved-ice-refresh/raw/main/Blueberry%20Shaved%20Ice.jpeg" alt="Blueberry Shaved Ice" class="menu-img clickable">
           <div class="menu-caption">Blueberry Shaved Ice</div>
         </div>
         <div class="menu-item">
-          <div style="background-color: #ff6b6b; color: white; display: flex; align-items: center; justify-content: center; height: 180px; border-radius: 8px;" class="menu-img clickable">
-            <span style="font-size: 1.5rem; font-weight: bold;">Strawberry</span>
-          </div>
+          <img src="https://github.com/JJsPPL/modern-shaved-ice-refresh/raw/main/Strawberry%20Shaved%20Ice.jpeg" alt="Strawberry Shaved Ice" class="menu-img clickable">
           <div class="menu-caption">Strawberry Shaved Ice</div>
         </div>
         <div class="menu-item">
-          <div style="background-color: #7bc950; color: white; display: flex; align-items: center; justify-content: center; height: 180px; border-radius: 8px;" class="menu-img clickable">
-            <span style="font-size: 1.5rem; font-weight: bold;">Lime</span>
-          </div>
+          <img src="https://github.com/JJsPPL/modern-shaved-ice-refresh/raw/main/Lime%20Shaved%20Ice.jpeg" alt="Lime Shaved Ice" class="menu-img clickable">
           <div class="menu-caption">Lime Shaved Ice</div>
         </div>
         <div class="menu-item">
-          <div style="background-color: #ffbe0b; color: white; display: flex; align-items: center; justify-content: center; height: 180px; border-radius: 8px;" class="menu-img clickable">
-            <span style="font-size: 1.5rem; font-weight: bold;">Mango</span>
-          </div>
+          <img src="https://github.com/JJsPPL/modern-shaved-ice-refresh/raw/main/Mango%20Bingsu.jpeg" alt="Mango Bingsu" class="menu-img clickable">
           <div class="menu-caption">Mango Bingsu</div>
         </div>
         <div class="menu-item">
-          <div style="background-color: #e83f6f; color: white; display: flex; align-items: center; justify-content: center; height: 180px; border-radius: 8px;" class="menu-img clickable">
-            <span style="font-size: 1.5rem; font-weight: bold;">Cotton Candy</span>
-          </div>
+          <img src="https://github.com/JJsPPL/modern-shaved-ice-refresh/raw/main/Cotton%20Candy%20Bingsu.jpeg" alt="Cotton Candy Bingsu" class="menu-img clickable">
           <div class="menu-caption">Cotton Candy Bingsu</div>
         </div>
         <div class="menu-item">
-          <div style="background-color: #ff6b6b; color: white; display: flex; align-items: center; justify-content: center; height: 180px; border-radius: 8px;" class="menu-img clickable">
-            <span style="font-size: 1.5rem; font-weight: bold;">Strawberry</span>
-          </div>
+          <img src="https://github.com/JJsPPL/modern-shaved-ice-refresh/raw/main/Strawberry%20Bingsu.jpeg" alt="Strawberry Bingsu" class="menu-img clickable">
           <div class="menu-caption">Strawberry Bingsu</div>
         </div>
         <div class="menu-item">
-          <div style="background-color: #6f4e37; color: white; display: flex; align-items: center; justify-content: center; height: 180px; border-radius: 8px;" class="menu-img clickable">
-            <span style="font-size: 1.5rem; font-weight: bold;">Chocolate</span>
-          </div>
+          <img src="https://github.com/JJsPPL/modern-shaved-ice-refresh/raw/main/Chocolate%20Banana%20Craffle.jpeg" alt="Chocolate Banana Craffle" class="menu-img clickable">
           <div class="menu-caption">Chocolate Banana Craffle</div>
         </div>
         <div class="menu-item">
-          <div style="background-color: #5c6b7a; color: white; display: flex; align-items: center; justify-content: center; height: 180px; border-radius: 8px;" class="menu-img clickable">
-            <span style="font-size: 1.5rem; font-weight: bold;">Oreo</span>
-          </div>
+          <img src="https://github.com/JJsPPL/modern-shaved-ice-refresh/raw/main/Oreo%20Craffle.jpeg" alt="Oreo Craffle" class="menu-img clickable">
           <div class="menu-caption">Oreo Craffle</div>
         </div>
         <div class="menu-item">
-          <div style="background-color: #ff6b6b; color: white; display: flex; align-items: center; justify-content: center; height: 180px; border-radius: 8px;" class="menu-img clickable">
-            <span style="font-size: 1.5rem; font-weight: bold;">Strawberry</span>
-          </div>
+          <img src="https://github.com/JJsPPL/modern-shaved-ice-refresh/raw/main/Strawberry%20Craffle.jpeg" alt="Strawberry Craffle" class="menu-img clickable">
           <div class="menu-caption">Strawberry Craffle</div>
         </div>
         <div class="menu-item">
-          <div style="background-color: #ffb347; color: white; display: flex; align-items: center; justify-content: center; height: 180px; border-radius: 8px;" class="menu-img clickable">
-            <span style="font-size: 1.5rem; font-weight: bold;">Calamanci</span>
-          </div>
+          <img src="https://github.com/JJsPPL/modern-shaved-ice-refresh/raw/main/Calamanci%20Lemonade.jpeg" alt="Calamanci Lemonade" class="menu-img clickable">
           <div class="menu-caption">Calamanci Lemonade</div>
         </div>
         <div class="menu-item">
-          <div style="background-color: #9c27b0; color: white; display: flex; align-items: center; justify-content: center; height: 180px; border-radius: 8px;" class="menu-img clickable">
-            <span style="font-size: 1.5rem; font-weight: bold;">Pickled Eggs</span>
-          </div>
+          <img src="https://github.com/JJsPPL/modern-shaved-ice-refresh/raw/main/Pickled%20Eggs.jpeg" alt="Pickled Eggs" class="menu-img clickable">
           <div class="menu-caption">Pickled Eggs</div>
         </div>
         <div class="menu-item">
-          <div style="background-color: #ff9800; color: white; display: flex; align-items: center; justify-content: center; height: 180px; border-radius: 8px;" class="menu-img clickable">
-            <span style="font-size: 1.5rem; font-weight: bold;">Pickled Papaya</span>
-          </div>
+          <img src="https://github.com/JJsPPL/modern-shaved-ice-refresh/raw/main/Pickled%20Papaya.jpeg" alt="Pickled Papaya" class="menu-img clickable">
           <div class="menu-caption">Pickled Papaya</div>
         </div>
         <div class="menu-item">
-          <div style="background-color: #1e88e5; color: white; display: flex; align-items: center; justify-content: center; height: 180px; border-radius: 8px;" class="menu-img clickable">
-            <span style="font-size: 1.5rem; font-weight: bold;">Fiesta Plate</span>
-          </div>
+          <img src="https://github.com/JJsPPL/modern-shaved-ice-refresh/raw/main/Fiesta%20Plate%20Chicken.jpeg" alt="Fiesta Plate BBQ Chicken" class="menu-img clickable">
           <div class="menu-caption">Fiesta Plate BBQ Chicken</div>
         </div>
         <div class="menu-item">
-          <div style="background-color: #ff5722; color: white; display: flex; align-items: center; justify-content: center; height: 180px; border-radius: 8px;" class="menu-img clickable">
-            <span style="font-size: 1.5rem; font-weight: bold;">Fiesta Plate</span>
-          </div>
+          <img src="https://github.com/JJsPPL/modern-shaved-ice-refresh/raw/main/Fiesta%20Plate%20Briskett.jpeg" alt="Fiesta Plate Smoked Brisket" class="menu-img clickable">
           <div class="menu-caption">Fiesta Plate Smoked Brisket</div>
         </div>
       </div>

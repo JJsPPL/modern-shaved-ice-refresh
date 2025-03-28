@@ -26,6 +26,39 @@ export const injectShavedIceContent = (): void => {
   // Inject the HTML content
   document.body.innerHTML = getFullPageTemplate(styles, setupEventListeners);
   
-  // No need to process images since we're using colored blocks as fallbacks
-  console.log('Page rendered with colored blocks instead of images for maximum compatibility');
+  // Setup images for lightbox functionality
+  setTimeout(() => {
+    setupImageLightbox();
+  }, 500);
+
+  console.log('Page rendered with images from GitHub repository');
 };
+
+/**
+ * Sets up lightbox functionality for images after the page content has been loaded
+ */
+function setupImageLightbox(): void {
+  const modal = document.getElementById('image-modal');
+  const modalImg = document.getElementById('modal-img');
+  const clickableImages = document.querySelectorAll('.clickable');
+  
+  if (!modal || !modalImg) {
+    console.error('Lightbox modal elements not found');
+    return;
+  }
+  
+  console.log(`Found ${clickableImages.length} clickable images to set up for lightbox`);
+  
+  // Add click event listener to each clickable image
+  clickableImages.forEach((img: Element) => {
+    if (img instanceof HTMLImageElement) {
+      img.onclick = function() {
+        modal.classList.add('active');
+        modalImg.src = this.src;
+      };
+      console.log(`Set up lightbox for image: ${img.src}`);
+    } else {
+      console.log('Found non-image clickable element', img);
+    }
+  });
+}

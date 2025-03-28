@@ -17,10 +17,25 @@ const ShavedIcePage: React.FC = () => {
         url: window.location.href
       });
       
-      // Inject content with colored blocks instead of images
+      // Inject content with images from GitHub repository
       injectShavedIceContent();
       
-      console.log('Page rendered successfully with colored blocks instead of images');
+      // Monitor image loading
+      setTimeout(() => {
+        const images = document.querySelectorAll('img');
+        console.log(`Monitoring ${images.length} images for loading status`);
+        
+        images.forEach((img, index) => {
+          if (img.complete) {
+            console.log(`Image ${index + 1} already loaded: ${img.src}`);
+          } else {
+            img.onload = () => console.log(`Image ${index + 1} loaded successfully: ${img.src}`);
+            img.onerror = () => console.error(`Image ${index + 1} failed to load: ${img.src}`);
+          }
+        });
+      }, 1000);
+      
+      console.log('Page rendered successfully with images from GitHub repository');
     } catch (error) {
       console.error('Error in ShavedIcePage:', error);
       
