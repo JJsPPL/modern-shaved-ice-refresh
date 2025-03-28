@@ -17,28 +17,10 @@ const ShavedIcePage: React.FC = () => {
         url: window.location.href
       });
       
-      // Inject content
+      // Inject content with colored blocks instead of images
       injectShavedIceContent();
       
-      // Add debug logging
-      setTimeout(() => {
-        const images = document.querySelectorAll('img');
-        console.log('Image loading status:', {
-          total: images.length,
-          loaded: Array.from(images).filter(img => img.complete && img.naturalWidth > 0).length,
-          failed: Array.from(images).filter(img => !img.complete || img.naturalWidth === 0).length
-        });
-        
-        // Log details for each image
-        images.forEach(img => {
-          console.log('Image details:', {
-            src: img.src,
-            alt: img.alt,
-            complete: img.complete,
-            naturalSize: `${img.naturalWidth}x${img.naturalHeight}`
-          });
-        });
-      }, 2000);
+      console.log('Page rendered successfully with colored blocks instead of images');
     } catch (error) {
       console.error('Error in ShavedIcePage:', error);
       
@@ -48,6 +30,7 @@ const ShavedIcePage: React.FC = () => {
           <h1 style="color: #ff3333; margin-bottom: 20px;">Something went wrong</h1>
           <p>We're having trouble loading the JJ's Shaved Ice experience. Please try refreshing the page.</p>
           <button onclick="window.location.reload()" style="background: #3e92cc; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; margin-top: 20px;">Refresh Page</button>
+          <p style="margin-top: 20px; color: #666; font-size: 0.9rem;">${error}</p>
         </div>
       `;
     }
