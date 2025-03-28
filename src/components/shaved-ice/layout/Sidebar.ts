@@ -26,16 +26,16 @@ export function getSidebarHTML(): string {
           <path d="M120,40 L60,70 L60,130 C60,170 120,200 120,200 C120,200 180,170 180,130 L180,70 L120,40 Z" 
                 fill="url(#pink-gradient)" fill-opacity="0.8" stroke="#000" stroke-width="2"/>
           
-          <!-- Bull/Ox Head (representing strength and determination) -->
+          <!-- Bull/Ox Head (representing strength and determination) - Changed to white -->
           <path d="M120,70 L90,90 L70,85 L60,100 L80,120 L100,125 L120,140 
                   L140,125 L160,120 L180,100 L170,85 L150,90 L120,70 Z" 
-                fill="#000" fill-opacity="0.8"/>
+                fill="#FFFFFF" fill-opacity="0.8"/>
           
-          <!-- Horns (representing protection and power) -->
+          <!-- Horns (representing protection and power) - Changed to white -->
           <path d="M70,85 L50,65 L45,80 L60,100 Z" 
-                fill="#000" fill-opacity="0.6"/>
+                fill="#FFFFFF" fill-opacity="0.6"/>
           <path d="M170,85 L190,65 L195,80 L180,100 Z" 
-                fill="#000" fill-opacity="0.6"/>
+                fill="#FFFFFF" fill-opacity="0.6"/>
           
           <!-- Hidden "J" in left horn -->
           <path d="M55,70 C55,65 60,65 60,70 L60,75 C55,75 55,72 55,70 Z" 
