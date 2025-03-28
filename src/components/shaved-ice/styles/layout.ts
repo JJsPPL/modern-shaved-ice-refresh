@@ -29,6 +29,7 @@ export const layoutStyles = `
     height: 120px;
     border-radius: 50%;
     object-fit: cover;
+    object-position: top; /* This focuses on the top part of the image */
     border: 4px solid rgba(255, 255, 255, 0.3);
     margin: 0 auto 1rem;
     box-shadow: var(--shadow-sm);
