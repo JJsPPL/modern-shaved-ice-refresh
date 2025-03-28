@@ -39,6 +39,30 @@ const ShavedIcePage: React.FC = () => {
               heroImage.src = 'lovable-uploads/86260f6b-8644-47d2-b65e-20f606c12303.png';
             }
           };
+          
+          // Force reload the image to apply any new source
+          const currentSrc = heroImage.src;
+          heroImage.src = '';
+          heroImage.src = currentSrc + '?t=' + new Date().getTime();
+          console.log('Forced reload of hero image:', heroImage.src);
+        }
+        
+        // Also handle logo image
+        const logoImage = document.querySelector('.logo-container img') as HTMLImageElement;
+        if (logoImage) {
+          console.log('Logo image found, ensuring proper loading');
+          logoImage.onerror = () => {
+            console.error('Logo image failed to load, attempting fallback');
+            if (isGitHubPages) {
+              logoImage.src = 'lovable-uploads/86260f6b-8644-47d2-b65e-20f606c12303.png';
+            }
+          };
+          
+          // Force reload the logo image
+          const currentLogoSrc = logoImage.src;
+          logoImage.src = '';
+          logoImage.src = currentLogoSrc + '?t=' + new Date().getTime();
+          console.log('Forced reload of logo image:', logoImage.src);
         }
         
         // Monitor all images

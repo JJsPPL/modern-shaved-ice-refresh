@@ -7,9 +7,9 @@ export function getSidebarHTML(): string {
   <!-- Sidebar Navigation -->
   <aside class="sidebar">
     <div class="logo-container">
-      <img src="https://placehold.co/120x120/3e92cc/ffffff?text=JJ%27s" alt="JJ's Shaved Ice Logo" class="logo">
+      <img src="/lovable-uploads/86260f6b-8644-47d2-b65e-20f606c12303.png" alt="JJ's Shaved Ice Logo" class="logo">
       <h1>JJ's Shaved Ice</h1>
-      <p class="tagline">Premium Frozen Delights</p>
+      <p class="tagline">Premium Delights</p>
     </div>
     
     <nav class="nav-links">
