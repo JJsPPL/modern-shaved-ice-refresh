@@ -52,7 +52,8 @@ function setupImageLightbox(): void {
   // Add click event listener to each clickable image
   clickableImages.forEach((img: Element) => {
     if (img instanceof HTMLImageElement) {
-      img.onclick = function() {
+      // Use an explicit typed function to ensure TypeScript knows `this` is HTMLImageElement
+      img.onclick = function(this: HTMLImageElement) {
         if (modal) {
           modal.classList.add('active');
         }
