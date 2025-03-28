@@ -60,14 +60,16 @@ function setupLogoSelector(): void {
       // Adjust position for smaller screens
       const adjustPositionForScreen = () => {
         if (window.innerWidth < 768) {
-          description.style.left = 'auto';
-          description.style.right = 'auto';
-          description.style.top = '100%';
-          description.style.width = '150px';
+          // Cast Element to HTMLElement to access style property
+          (description as HTMLElement).style.left = 'auto';
+          (description as HTMLElement).style.right = 'auto';
+          (description as HTMLElement).style.top = '100%';
+          (description as HTMLElement).style.width = '150px';
         } else {
-          description.style.left = '100%';
-          description.style.top = '0';
-          description.style.width = '200px';
+          // Cast Element to HTMLElement to access style property
+          (description as HTMLElement).style.left = '100%';
+          (description as HTMLElement).style.top = '0';
+          (description as HTMLElement).style.width = '200px';
         }
       };
       
