@@ -9,7 +9,8 @@ const ShavedIcePage: React.FC = () => {
       document.body.innerHTML = '';
       
       // Add a version timestamp to prevent caching issues
-      console.log("Loading shaved ice content, version: " + new Date().toISOString());
+      const timestamp = new Date().toISOString();
+      console.log(`Loading shaved ice content, version: ${timestamp}`);
       
       // Prepare the body element and inject content
       injectShavedIceContent();
@@ -19,58 +20,43 @@ const ShavedIcePage: React.FC = () => {
       
       // Add additional debugging for image loading
       setTimeout(() => {
+        // Log environment information
+        console.log(`Current URL: ${window.location.href}`);
+        console.log(`Is GitHub Pages: ${window.location.href.includes('github.io')}`);
+        
+        // Check all images
         const images = document.querySelectorAll('img');
+        console.log(`Total images on page: ${images.length}`);
+        
+        // Log status of each image
         images.forEach(img => {
-          console.log(`Image loaded: ${img.src}, Alt: ${img.alt}, Complete: ${img.complete}`);
-          
-          // Add error handling for each image
-          img.onerror = () => {
-            console.error(`Failed to load image: ${img.src}`);
-            // Set a colored background instead of error image
-            img.style.backgroundColor = getColorForFlavor(img.alt);
-            img.style.display = 'flex';
-            img.style.alignItems = 'center';
-            img.style.justifyContent = 'center';
-            img.style.color = 'white';
-            img.style.fontWeight = 'bold';
-            img.style.fontSize = '1.5rem';
-            img.style.textAlign = 'center';
-            img.style.padding = '10px';
-            img.style.minHeight = '150px';
-            // Use flavor name from alt text
-            const flavorName = img.alt.split(' ')[0];
-            img.outerHTML = `<div style="background-color: ${getColorForFlavor(img.alt)}; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.5rem; text-align: center; padding: 10px; min-height: 150px; width: 100%; border-radius: 8px;">${flavorName}</div>`;
-          };
+          console.log(`Image: ${img.src}, Alt: ${img.alt}, Complete: ${img.complete}, Natural size: ${img.naturalWidth}x${img.naturalHeight}`);
         });
-      }, 500);
+        
+        // Check for any loading errors
+        const failedImages = Array.from(images).filter(img => !img.complete || img.naturalWidth === 0);
+        if (failedImages.length > 0) {
+          console.warn(`${failedImages.length} images failed to load properly.`);
+        } else {
+          console.log('All images appear to have loaded successfully.');
+        }
+      }, 2000);
     } catch (error) {
       console.error("Error injecting shaved ice content:", error);
+      
+      // Provide a fallback error message to the user
+      document.body.innerHTML = `
+        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; padding: 20px; text-align: center;">
+          <h1 style="color: #ff3333; margin-bottom: 20px;">Something went wrong</h1>
+          <p>We're having trouble loading the JJ's Shaved Ice experience. Please try refreshing the page.</p>
+          <button onclick="window.location.reload()" style="background: #3e92cc; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; margin-top: 20px;">Refresh Page</button>
+        </div>
+      `;
     }
     
     // No cleanup function needed
     return () => {};
   }, []);
-
-  // Helper function to get color based on flavor name
-  function getColorForFlavor(altText: string): string {
-    const text = altText.toLowerCase();
-    
-    if (text.includes('blueberry')) return '#3e92cc';
-    if (text.includes('strawberry')) return '#ff6b6b';
-    if (text.includes('lime')) return '#7bc950';
-    if (text.includes('mango')) return '#ffbe0b';
-    if (text.includes('cotton candy')) return '#e83f6f';
-    if (text.includes('chocolate')) return '#6f4e37';
-    if (text.includes('oreo')) return '#5c6b7a';
-    if (text.includes('calamanci')) return '#ffb347';
-    if (text.includes('pickled eggs')) return '#9c27b0';
-    if (text.includes('pickled papaya')) return '#ff9800';
-    if (text.includes('chicken')) return '#1e88e5';
-    if (text.includes('brisket')) return '#ff5722';
-    
-    // Default color
-    return '#3e92cc';
-  }
 
   // This component doesn't need to render anything itself as we're injecting content directly
   return null;
