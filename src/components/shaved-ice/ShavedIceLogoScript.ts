@@ -29,7 +29,16 @@ function setupLogoSelector(): void {
         localStorage.setItem('selected-logo', logoId);
       }
       
-      console.log(`Selected logo option: ${logoId}`);
+      // Get descriptive name based on logo ID
+      let logoName = "Default";
+      switch(logoId) {
+        case "1": logoName = "Bull Shield"; break;
+        case "2": logoName = "Market Chart"; break;
+        case "3": logoName = "Cosmic Pillar"; break;
+        case "4": logoName = "Corporate Shield"; break;
+      }
+      
+      console.log(`Selected logo option: ${logoName} (ID: ${logoId})`);
     });
   });
   

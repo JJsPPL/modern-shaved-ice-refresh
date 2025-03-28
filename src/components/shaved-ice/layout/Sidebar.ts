@@ -9,103 +9,171 @@ export function getSidebarHTML(): string {
     <div class="logo-container">
       <div class="logo-text">JJ's Shaved Ice</div>
       
-      <!-- Logo Option 1: Infinity Ice Mountain -->
+      <!-- Logo Option 1: Bull Shield -->
       <div class="logo-option selected" data-logo="1">
         <svg class="logo-svg" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
           <defs>
-            <linearGradient id="mountain-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" style="stop-color:#9b87f5;stop-opacity:1" />
-              <stop offset="100%" style="stop-color:#7E69AB;stop-opacity:1" />
+            <linearGradient id="bull-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#FF5733;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#900C3F;stop-opacity:1" />
             </linearGradient>
           </defs>
-          <circle cx="120" cy="120" r="120" fill="url(#mountain-gradient)"/>
+          <rect width="240" height="240" rx="20" fill="url(#bull-gradient)"/>
           
-          <!-- Infinity symbol (representing endless possibilities) -->
-          <path d="M80,120 C80,100 100,100 110,120 C120,140 140,140 150,120 C160,100 180,100 180,120 C180,140 160,140 150,120 C140,100 120,100 110,120 C100,140 80,140 80,120 Z" 
-                fill="#D6BCFA" stroke="#fff" stroke-width="2"/>
+          <!-- Bull Shield (representing strength and protection) -->
+          <path d="M120,40 L60,70 L60,130 C60,170 120,200 120,200 C120,200 180,170 180,130 L180,70 L120,40 Z" 
+                fill="#fff" fill-opacity="0.2" stroke="#fff" stroke-width="2"/>
           
-          <!-- Mountain peaks (representing achievement and aspiration) -->
-          <path d="M50,160 L100,80 L120,110 L150,60 L190,160 Z" 
+          <!-- Bull/Ox Head (representing strength and determination) -->
+          <path d="M120,70 L90,90 L70,85 L60,100 L80,120 L100,125 L120,140 
+                  L140,125 L160,120 L180,100 L170,85 L150,90 L120,70 Z" 
                 fill="#fff" fill-opacity="0.8"/>
           
-          <!-- Three snowflakes (representing the founder's three children) -->
-          <circle cx="80" cy="90" r="5" fill="#fff"/>
-          <circle cx="120" cy="70" r="5" fill="#fff"/>
-          <circle cx="160" cy="90" r="5" fill="#fff"/>
+          <!-- Horns (representing protection and power) -->
+          <path d="M70,85 L50,65 L45,80 L60,100 Z" 
+                fill="#fff" fill-opacity="0.6"/>
+          <path d="M170,85 L190,65 L195,80 L180,100 Z" 
+                fill="#fff" fill-opacity="0.6"/>
           
-          <text x="120" y="175" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle" fill="#ffffff">JJ's Shaved Ice</text>
+          <!-- Hidden "J" in left horn -->
+          <path d="M55,70 C55,65 60,65 60,70 L60,75 C55,75 55,72 55,70 Z" 
+                fill="#fff" fill-opacity="0.9"/>
+          
+          <!-- Hidden "J" in right horn -->
+          <path d="M185,70 C185,65 180,65 180,70 L180,75 C185,75 185,72 185,70 Z" 
+                fill="#fff" fill-opacity="0.9"/>
+          
+          <!-- Shaved Ice (represented as a cone below) -->
+          <path d="M95,135 L120,170 L145,135 Z" 
+                fill="#fff" stroke="#fff" stroke-width="1"/>
+          
+          <!-- Ice crystals (dots on the shield) -->
+          <circle cx="90" cy="100" r="3" fill="#fff"/>
+          <circle cx="150" cy="100" r="3" fill="#fff"/>
+          <circle cx="120" cy="110" r="3" fill="#fff"/>
+          
+          <text x="120" y="190" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#ffffff">JJ's Shaved Ice</text>
         </svg>
       </div>
       
-      <!-- Logo Option 2: Phoenix Rising -->
+      <!-- Logo Option 2: Market Chart -->
       <div class="logo-option" data-logo="2">
         <svg class="logo-svg" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
           <defs>
-            <linearGradient id="phoenix-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" style="stop-color:#F97316;stop-opacity:1" />
-              <stop offset="100%" style="stop-color:#ea384c;stop-opacity:1" />
+            <linearGradient id="chart-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#3498DB;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#8E44AD;stop-opacity:1" />
             </linearGradient>
           </defs>
-          <rect width="240" height="240" rx="20" fill="url(#phoenix-gradient)"/>
+          <rect width="240" height="240" fill="url(#chart-gradient)"/>
           
-          <!-- Phoenix wings (representing rebirth and transformation) -->
-          <path d="M45,120 C60,80 90,70 120,50 C150,70 180,80 195,120 
-                   C180,110 150,100 120,110 C90,100 60,110 45,120 Z" 
-                fill="#D6BCFA" fill-opacity="0.8"/>
+          <!-- Market chart umbrella shape (representing business protection) -->
+          <path d="M120,40 L60,100 L80,100 L60,120 L90,120 L70,140 L120,140 L120,180 L80,200 L160,200 L120,180 L120,140 L170,140 L150,120 L180,120 L160,100 L180,100 Z" 
+                fill="#fff" fill-opacity="0.8" stroke="#fff" stroke-width="1"/>
           
-          <!-- Ice crystal (center of the phoenix) -->
-          <path d="M120,70 L110,90 L120,110 L130,90 Z" 
-                fill="#fff" stroke="#D6BCFA" stroke-width="2"/>
-          <path d="M120,70 L100,80 L120,110 L140,80 Z" 
-                fill="#fff" fill-opacity="0.6" stroke="#D6BCFA" stroke-width="1"/>
+          <!-- Chart lines (representing growth and success) -->
+          <polyline points="80,110 90,90 100,100 110,80 120,90 130,70 140,85 150,65 160,70" 
+                   stroke="#D6BCFA" stroke-width="3" fill="none"/>
+          <polyline points="80,115 90,105 100,120 110,110 120,125 130,115 140,130 150,120 160,135" 
+                   stroke="#A78BFA" stroke-width="3" fill="none"/>
           
-          <!-- Seven flames (representing the seven continents) -->
-          <path d="M100,125 Q110,115 105,110 Q115,115 120,125 Q125,115 135,110 Q130,115 140,125 Z" 
-                fill="#fff" fill-opacity="0.9"/>
-                
-          <!-- Two hidden Js (company initials) in the flame patterns -->
-          <path d="M90,140 C90,130 100,130 100,140 L100,150 C90,150 90,145 90,140 Z" 
-                fill="#D6BCFA" fill-opacity="0.9"/>
-          <path d="M150,140 C150,130 140,130 140,140 L140,150 C150,150 150,145 150,140 Z" 
-                fill="#D6BCFA" fill-opacity="0.9"/>
-                
-          <text x="120" y="175" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle" fill="#ffffff">JJ's Shaved Ice</text>
+          <!-- Ice cone at the bottom of the chart -->
+          <path d="M110,180 L120,200 L130,180 Z" 
+                fill="#fff" stroke="#fff" stroke-width="1"/>
+          
+          <!-- Hidden "J" glyphs in the chart peaks -->
+          <path d="M110,75 C110,70 115,70 115,75 L115,85 C110,85 110,80 110,75 Z" 
+                fill="#fff" fill-opacity="0.8"/>
+          <path d="M150,60 C150,55 155,55 155,60 L155,70 C150,70 150,65 150,60 Z" 
+                fill="#fff" fill-opacity="0.8"/>
+          
+          <text x="120" y="220" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#ffffff">JJ's Shaved Ice</text>
         </svg>
       </div>
       
-      <!-- Logo Option 3: Harmony Wave -->
+      <!-- Logo Option 3: Cosmic Pillar -->
       <div class="logo-option" data-logo="3">
         <svg class="logo-svg" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
           <defs>
-            <linearGradient id="ocean-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" style="stop-color:#0EA5E9;stop-opacity:1" />
-              <stop offset="100%" style="stop-color:#1EAEDB;stop-opacity:1" />
+            <linearGradient id="cosmic-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" style="stop-color:#000B33;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#1E3A8A;stop-opacity:1" />
+            </linearGradient>
+            <radialGradient id="pillar-glow" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+              <stop offset="0%" style="stop-color:#10B981;stop-opacity:0.9" />
+              <stop offset="100%" style="stop-color:#059669;stop-opacity:0.4" />
+            </radialGradient>
+          </defs>
+          <rect width="240" height="240" fill="url(#cosmic-gradient)"/>
+          
+          <!-- Stars in background (representing reaching for the stars) -->
+          <circle cx="40" cy="40" r="1" fill="#fff"/>
+          <circle cx="60" cy="60" r="1.5" fill="#fff"/>
+          <circle cx="80" cy="30" r="1" fill="#fff"/>
+          <circle cx="180" cy="40" r="1.5" fill="#fff"/>
+          <circle cx="200" cy="50" r="1" fill="#fff"/>
+          <circle cx="160" cy="70" r="1" fill="#fff"/>
+          <circle cx="40" cy="180" r="1.5" fill="#fff"/>
+          <circle cx="200" cy="190" r="1" fill="#fff"/>
+          
+          <!-- Cloud formations (representing cover/protection) -->
+          <path d="M20,180 Q40,160 60,170 Q80,150 100,160 Q120,140 140,160 Q160,150 180,170 Q200,160 220,180 L220,200 L20,200 Z" 
+                fill="#fff" fill-opacity="0.3"/>
+          
+          <!-- The glowing pillar/umbrella handle (representing structure) -->
+          <rect x="110" y="40" width="20" height="140" fill="url(#pillar-glow)" rx="5" />
+          
+          <!-- Umbrella top / Ice cone -->
+          <path d="M120,40 L80,80 L100,80 L90,100 L110,100 L100,120 L120,120 L140,120 L130,100 L150,100 L140,80 L160,80 Z" 
+                fill="#fff" fill-opacity="0.7"/>
+          
+          <!-- Hidden "J"s as small figures on the clouds -->
+          <path d="M40,170 C40,165 45,165 45,170 L45,175 C40,175 40,172 40,170 Z" 
+                fill="#fff" fill-opacity="0.8"/>
+          <path d="M180,165 C180,160 185,160 185,165 L185,170 C180,170 180,167 180,165 Z" 
+                fill="#fff" fill-opacity="0.8"/>
+          
+          <!-- Astronaut helmet silhouette (representing vision) -->
+          <circle cx="120" cy="30" r="15" fill="#fff" fill-opacity="0.2" stroke="#fff" stroke-width="1"/>
+          
+          <text x="120" y="210" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#ffffff">JJ's Shaved Ice</text>
+        </svg>
+      </div>
+      
+      <!-- Logo Option 4: Corporate Shield -->
+      <div class="logo-option" data-logo="4">
+        <svg class="logo-svg" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="corporate-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#2C3E50;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#4A5568;stop-opacity:1" />
             </linearGradient>
           </defs>
-          <rect width="240" height="240" rx="40" fill="url(#ocean-gradient)"/>
+          <rect width="240" height="240" fill="url(#corporate-gradient)"/>
           
-          <!-- Yin-yang inspired design (representing harmony and balance) -->
-          <circle cx="120" cy="100" r="50" fill="#fff"/>
-          <path d="M120,50 A50,50 0 0 1 120,150 A50,50 0 0 0 120,50 Z" 
-                fill="#0EA5E9"/>
+          <!-- Corporate Shield (representing business protection) -->
+          <path d="M120,40 L60,80 L60,150 C60,190 120,200 120,200 C120,200 180,190 180,150 L180,80 L120,40 Z" 
+                fill="#fff" fill-opacity="0.1" stroke="#fff" stroke-width="2"/>
           
-          <!-- Small dots (representing drops of water and essence) -->
-          <circle cx="120" cy="75" r="8" fill="#0EA5E9"/>
-          <circle cx="120" cy="125" r="8" fill="#fff"/>
+          <!-- Umbrella shape on shield -->
+          <path d="M120,60 L90,90 L100,90 L90,110 L110,110 L105,130 L120,130 L135,130 L130,110 L150,110 L140,90 L150,90 Z" 
+                fill="#fff" fill-opacity="0.7"/>
           
-          <!-- Wave pattern (representing fluidity and adaptability) -->
-          <path d="M40,160 C70,140 90,170 120,150 C150,130 170,160 200,140 L200,180 L40,180 Z" 
-                fill="#D6BCFA" fill-opacity="0.8"/>
+          <!-- Ice cone represented at bottom -->
+          <path d="M110,150 L120,170 L130,150 Z" 
+                fill="#fff" fill-opacity="0.8"/>
           
-          <!-- Three hidden stars (representing dreams, ambition, and guidance) -->
-          <path d="M80,95 L83,102 L90,102 L85,107 L87,115 L80,110 L73,115 L75,107 L70,102 L77,102 Z" 
-                fill="#D946EF" fill-opacity="0.6" transform="scale(0.5) translate(100, 70)"/>
-          <path d="M80,95 L83,102 L90,102 L85,107 L87,115 L80,110 L73,115 L75,107 L70,102 L77,102 Z" 
-                fill="#D946EF" fill-opacity="0.6" transform="scale(0.5) translate(200, 140)"/>
-          <path d="M80,95 L83,102 L90,102 L85,107 L87,115 L80,110 L73,115 L75,107 L70,102 L77,102 Z" 
-                fill="#D946EF" fill-opacity="0.6" transform="scale(0.5) translate(300, 70)"/>
-                
-          <text x="120" y="175" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle" fill="#ffffff">JJ's Shaved Ice</text>
+          <!-- Business graph lines (representing corporate success) -->
+          <polyline points="90,100 100,95 110,105 120,90 130,100 140,85 150,95" 
+                   stroke="#fff" stroke-width="1" fill="none"/>
+          
+          <!-- Two "J" letters forming the handle of the umbrella -->
+          <path d="M115,130 C115,140 125,140 125,130 L125,150" 
+                stroke="#fff" stroke-width="2" fill="none"/>
+          <path d="M112,130 C112,143 128,143 128,130" 
+                stroke="#fff" stroke-width="1" fill="none"/>
+          
+          <text x="120" y="190" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#ffffff">JJ's Shaved Ice</text>
         </svg>
       </div>
       
