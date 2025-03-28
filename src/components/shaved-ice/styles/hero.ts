@@ -23,20 +23,6 @@ export const heroStyles = `
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
   }
 
-  .logo-text {
-    position: absolute;
-    top: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: var(--primary-dark);
-    color: var(--white);
-    padding: 0.25rem 1rem;
-    border-radius: var(--border-radius);
-    font-size: 0.8rem;
-    font-weight: bold;
-    z-index: 2;
-  }
-
   .hero-section {
     position: relative;
   }

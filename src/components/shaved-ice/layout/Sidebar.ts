@@ -7,8 +7,6 @@ export function getSidebarHTML(): string {
   <!-- Sidebar Navigation -->
   <aside class="sidebar">
     <div class="logo-container">
-      <div class="logo-text">JJ's Shaved Ice</div>
-      
       <!-- Modified Bull Shield Logo -->
       <div class="logo-option selected" data-logo="1">
         <svg class="logo-svg" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
@@ -55,8 +53,6 @@ export function getSidebarHTML(): string {
           <circle cx="90" cy="100" r="3" fill="#D946EF"/>
           <circle cx="150" cy="100" r="3" fill="#D946EF"/>
           <circle cx="120" cy="110" r="3" fill="#D946EF"/>
-          
-          <text x="120" y="190" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#000000">JJ's Shaved Ice</text>
         </svg>
       </div>
       
