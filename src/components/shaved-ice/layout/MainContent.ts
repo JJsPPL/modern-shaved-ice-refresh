@@ -7,6 +7,7 @@ import { getIntroSectionHTML } from '../sections/IntroSection';
 import { getMenuSectionHTML } from '../sections/MenuSection';
 import { getEventsSectionHTML } from '../sections/EventsSection';
 import { getUpcomingEventsSectionHTML } from '../sections/UpcomingEventsSection';
+import { getRentalsSectionHTML } from '../sections/RentalsSection';
 import { getContactSectionHTML } from '../sections/ContactSection';
 import { getSponsorsSectionHTML } from '../sections/SponsorsSection';
 
@@ -19,6 +20,7 @@ export function getMainContentHTML(): string {
     ${getMenuSectionHTML()}
     ${getEventsSectionHTML()}
     ${getUpcomingEventsSectionHTML()}
+    ${getRentalsSectionHTML()}
     ${getContactSectionHTML()}
     ${getSponsorsSectionHTML()}
   </main>`;

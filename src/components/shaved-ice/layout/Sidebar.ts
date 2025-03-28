@@ -16,6 +16,7 @@ export function getSidebarHTML(): string {
       <a href="#menu" class="nav-link">Our Menu</a>
       <a href="#events" class="nav-link">Our Events</a>
       <a href="#upcoming" class="nav-link">Upcoming</a>
+      <a href="#rentals" class="nav-link">Rentals</a>
       <a href="#contact" class="nav-link">Contact</a>
       <a href="#sponsors" class="nav-link">Sponsors</a>
     </nav>
