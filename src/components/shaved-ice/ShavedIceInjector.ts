@@ -76,7 +76,7 @@ function setupImageLightbox(): void {
   
   // Add click event listener to each clickable image
   imageArray.forEach((img, index) => {
-    img.onclick = function() {
+    img.onclick = function(this: HTMLImageElement) {
       if (modal) {
         modal.classList.add('active');
         if (modalImg) {
