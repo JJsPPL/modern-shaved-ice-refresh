@@ -14,6 +14,7 @@ export function initializeLogo(): void {
     if (document.querySelector('.logo-option')) {
       initLogoSelector();
       clearInterval(checkInterval);
+      console.log('Logo selector initialized successfully');
     }
   }, 500);
   

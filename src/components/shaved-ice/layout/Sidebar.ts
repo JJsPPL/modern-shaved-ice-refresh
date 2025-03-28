@@ -1,4 +1,3 @@
-
 /**
  * Returns the HTML for the sidebar navigation
  */
@@ -175,6 +174,15 @@ export function getSidebarHTML(): string {
           
           <text x="120" y="190" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#ffffff">JJ's Shaved Ice</text>
         </svg>
+      </div>
+      
+      <!-- Logo Option 5: Beach Paradise -->
+      <div class="logo-option" data-logo="5">
+        <div class="beach-girl-logo">
+          <img src="/lovable-uploads/9ec8f343-ccbd-4615-929f-4a870ce4051b.png" alt="Beach Girl Enjoying Shaved Ice" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+          <div class="logo-text">JJ's Shaved Ice</div>
+        </div>
+        <div class="logo-description">Beach Paradise: Relax and enjoy our refreshing treats in a tropical paradise setting. Represents leisure, joy, and the perfect vacation experience.</div>
       </div>
       
       <h1>JJ's Premium Delights</h1>
