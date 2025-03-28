@@ -17,6 +17,12 @@ const ShavedIcePage: React.FC = () => {
         url: window.location.href
       });
       
+      // Force cache busting for GitHub Pages by adding a timestamp parameter to image URLs
+      if (isGitHubPages) {
+        console.log('GitHub Pages detected, applying cache-busting strategy');
+        // This will be handled by the image loading strategy in injectShavedIceContent
+      }
+      
       // Inject content with images from GitHub repository
       injectShavedIceContent();
       

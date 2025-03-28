@@ -20,11 +20,30 @@ export const injectShavedIceContent = (): void => {
   const isGitHubPages = window.location.href.includes('github.io');
   console.log('Environment:', {
     isGitHubPages,
-    currentUrl: window.location.href
+    currentUrl: window.location.href,
+    timestamp: new Date().toISOString()
   });
   
   // Inject the HTML content
   document.body.innerHTML = getFullPageTemplate(styles, setupEventListeners);
+  
+  // Add a meta tag to prevent caching on GitHub Pages
+  if (isGitHubPages) {
+    const meta = document.createElement('meta');
+    meta.httpEquiv = 'Cache-Control';
+    meta.content = 'no-cache, no-store, must-revalidate';
+    document.head.appendChild(meta);
+    
+    const pragma = document.createElement('meta');
+    pragma.httpEquiv = 'Pragma';
+    pragma.content = 'no-cache';
+    document.head.appendChild(pragma);
+    
+    const expires = document.createElement('meta');
+    expires.httpEquiv = 'Expires';
+    expires.content = '0';
+    document.head.appendChild(expires);
+  }
   
   // Setup images for lightbox functionality
   setTimeout(() => {

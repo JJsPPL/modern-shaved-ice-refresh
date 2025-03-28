@@ -12,22 +12,22 @@ export function getEventsSectionHTML(): string {
       </p>
       <div class="events-grid">
         <div class="event-img-container">
-          <img src="https://github.com/JJsPPL/modern-shaved-ice-refresh/raw/main/bubblehouse.jpg" alt="JJ's & Roro's Merch Booth" class="event-img clickable">
+          <img src="https://github.com/JJsPPL/modern-shaved-ice-refresh/raw/main/Roror1.jpeg" alt="JJ's & Roro's Event 1" class="event-img clickable">
         </div>
         <div class="event-img-container">
-          <img src="https://github.com/JJsPPL/modern-shaved-ice-refresh/raw/main/2JJ.jpg" alt="JJ's & Roro's Order Line" class="event-img clickable">
+          <img src="https://github.com/JJsPPL/modern-shaved-ice-refresh/raw/main/Roro2.jpeg" alt="JJ's & Roro's Event 2" class="event-img clickable">
         </div>
         <div class="event-img-container">
-          <img src="https://github.com/JJsPPL/modern-shaved-ice-refresh/raw/main/Blueberry%20Shaved%20Ice.jpeg" alt="JJ's Order Line" class="event-img clickable">
+          <img src="https://github.com/JJsPPL/modern-shaved-ice-refresh/raw/main/JJS%20SHAVED%20ICE%20JONATHAN%20PABLO2.jpeg" alt="JJ's Event 3" class="event-img clickable">
         </div>
         <div class="event-img-container">
-          <img src="https://github.com/JJsPPL/modern-shaved-ice-refresh/raw/main/Cotton%20Candy%20Bingsu.jpeg" alt="Taking Orders" class="event-img clickable">
+          <img src="https://github.com/JJsPPL/modern-shaved-ice-refresh/raw/main/JJS%20SHAVED%20ICE%20JONATHAN%20PABLO1.jpeg" alt="JJ's Event 4" class="event-img clickable">
         </div>
         <div class="event-img-container">
-          <img src="https://github.com/JJsPPL/modern-shaved-ice-refresh/raw/main/Mango%20Bingsu.jpeg" alt="Helper Highlights" class="event-img clickable">
+          <img src="https://github.com/JJsPPL/modern-shaved-ice-refresh/raw/main/helpers2.jpeg" alt="JJ's Helper Highlights" class="event-img clickable">
         </div>
         <div class="event-img-container">
-          <img src="https://github.com/JJsPPL/modern-shaved-ice-refresh/raw/main/Strawberry%20Bingsu.jpeg" alt="Proud JJ's Helper" class="event-img clickable">
+          <img src="https://github.com/JJsPPL/modern-shaved-ice-refresh/raw/main/helper3.jpeg" alt="JJ's Helper Event" class="event-img clickable">
         </div>
       </div>
     </section>`;
