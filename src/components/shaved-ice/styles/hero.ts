@@ -69,4 +69,52 @@ export const heroStyles = `
     display: block;
     margin: 0 auto;
   }
+  
+  /* Logo description */
+  .logo-description {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 200px;
+    background: var(--primary-dark);
+    color: var(--white);
+    padding: 8px;
+    border-radius: var(--border-radius);
+    font-size: 0.8rem;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 10;
+  }
+  
+  .logo-option:hover .logo-description {
+    opacity: 1;
+  }
+  
+  /* Beach girl logo styles */
+  .beach-girl-logo {
+    position: relative;
+    background: linear-gradient(135deg, #87CEEB, #1E90FF);
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  .beach-girl-logo .logo-text {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    text-align: center;
+    background: rgba(0,0,0,0.5);
+    padding: 2px 5px;
+    border-radius: 10px;
+    font-size: 10px;
+    font-weight: bold;
+    color: white;
+    z-index: 3;
+  }
 `;

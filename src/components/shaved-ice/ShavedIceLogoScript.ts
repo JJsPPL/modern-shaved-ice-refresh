@@ -36,6 +36,7 @@ function setupLogoSelector(): void {
         case "2": logoName = "Market Chart"; break;
         case "3": logoName = "Cosmic Pillar"; break;
         case "4": logoName = "Corporate Shield"; break;
+        case "5": logoName = "Beach Paradise"; break;
       }
       
       console.log(`Selected logo option: ${logoName} (ID: ${logoId})`);
@@ -51,4 +52,27 @@ function setupLogoSelector(): void {
       savedOption.classList.add('selected');
     }
   }
+  
+  // Add tooltip functionality for logo descriptions
+  logoOptions.forEach(option => {
+    const description = option.querySelector('.logo-description');
+    if (description) {
+      // Adjust position for smaller screens
+      const adjustPositionForScreen = () => {
+        if (window.innerWidth < 768) {
+          description.style.left = 'auto';
+          description.style.right = 'auto';
+          description.style.top = '100%';
+          description.style.width = '150px';
+        } else {
+          description.style.left = '100%';
+          description.style.top = '0';
+          description.style.width = '200px';
+        }
+      };
+      
+      adjustPositionForScreen();
+      window.addEventListener('resize', adjustPositionForScreen);
+    }
+  });
 }
