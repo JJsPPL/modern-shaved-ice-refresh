@@ -18,8 +18,6 @@ export function getRentalsSectionHTML(): string {
           <div class="rental-info">
             <h3 class="rental-title">Bubble House</h3>
             <p class="rental-desc">Create magical moments with our transparent bubble house! Perfect for birthdays, photoshoots, and special celebrations. Comes with colorful ball pit options.</p>
-            <p class="rental-pricing">Starting at $199 for 4 hours</p>
-            <a href="#contact" class="rental-cta">Inquire Now</a>
           </div>
         </div>
       </div>
