@@ -6,6 +6,6 @@ export function getHeroSectionHTML(): string {
   return `
     <!-- Hero Section -->
     <section class="hero-section">
-      <img src="2JJ.jpg" alt="JJ's Shaved Ice Experience" class="hero clickable">
+      <img src="/modern-shaved-ice-refresh/2JJ.jpg" alt="JJ's Shaved Ice Experience" class="hero clickable">
     </section>`;
 }

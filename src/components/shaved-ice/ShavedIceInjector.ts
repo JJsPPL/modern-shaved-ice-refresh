@@ -1,4 +1,3 @@
-
 import { styles } from './styles';
 import { setupEventListeners } from './ShavedIceScripts';
 import { getFullPageTemplate } from './template/PageTemplate';
@@ -16,83 +15,74 @@ export const injectShavedIceContent = (): void => {
   document.body.style.display = 'block';
   document.body.style.overflow = 'auto'; // Ensure scrolling works properly
   
-  // Set a cache-busting parameter
+  // Set a cache-busting parameter and determine if we're on GitHub Pages
   const cacheBuster = `?v=${Date.now()}`;
+  const isGitHubPages = window.location.href.includes('github.io');
+  const baseUrl = isGitHubPages ? '/modern-shaved-ice-refresh' : '';
   
-  // Inject the HTML content directly into the body element
+  // Log environment information
+  console.log('Environment:', {
+    isGitHubPages,
+    baseUrl,
+    currentUrl: window.location.href
+  });
+  
+  // Inject the HTML content
   document.body.innerHTML = getFullPageTemplate(styles, setupEventListeners);
   
-  // Add cache-busting to images and fix paths for GitHub Pages
+  // Fix image paths and add error handling
   setTimeout(() => {
-    const isGitHubPages = window.location.href.includes('github.io');
-    console.log(`Running in GitHub Pages environment: ${isGitHubPages}`);
-    
     const images = document.querySelectorAll('img');
+    console.log(`Processing ${images.length} images`);
+    
     images.forEach(img => {
       try {
-        // Check if the image has already been processed
-        if (img.getAttribute('data-processed') === 'true') {
-          return;
-        }
-
-        // Get original src for logging
+        if (img.getAttribute('data-processed') === 'true') return;
+        
         const originalSrc = img.src;
+        let newSrc = '';
         
-        // Extract the filename from the path
-        let filename = '';
-        
-        if (img.src.includes('/')) {
-          filename = img.src.split('/').pop() || '';
-        } else {
-          filename = img.src;
-        }
-        
-        // Skip if the image is already a placeholder or an external URL
-        if (filename.includes('placehold.co') || 
+        // Skip external images and placeholders
+        if (img.src.includes('placehold.co') || 
             (img.src.startsWith('http') && !img.src.includes(window.location.host))) {
-          console.log(`Skipping external image: ${img.src}`);
+          console.log('Skipping external image:', img.src);
           return;
         }
         
-        // For GitHub Pages we need to use the repo name in the path
-        let newSrc = filename;
+        // Extract filename and build new path
+        const filename = img.src.split('/').pop() || '';
+        newSrc = `${baseUrl}/${filename}${cacheBuster}`;
         
-        // Add cache-busting parameter
-        if (!newSrc.includes('?')) {
-          newSrc = `${newSrc}${cacheBuster}`;
-        }
-        
-        // Set the new src attribute
+        // Update image source
         img.src = newSrc;
         img.setAttribute('data-processed', 'true');
+        console.log('Updated image path:', { from: originalSrc, to: newSrc });
         
-        console.log(`Updated image path from ${originalSrc} to ${img.src}`);
-        
-        // Add error handling for each image
+        // Add error handling
         img.onerror = () => {
-          console.error(`Failed to load image: ${img.src}`);
+          console.error('Failed to load image:', newSrc);
           const flavorName = img.alt.split(' ')[0] || 'Flavor';
           const bgColor = getColorForFlavor(img.alt);
           
-          // Replace the img with a div
           const placeholder = document.createElement('div');
-          placeholder.style.backgroundColor = bgColor;
-          placeholder.style.display = 'flex';
-          placeholder.style.alignItems = 'center';
-          placeholder.style.justifyContent = 'center';
-          placeholder.style.color = 'white';
-          placeholder.style.fontWeight = 'bold';
-          placeholder.style.fontSize = '1.5rem';
-          placeholder.style.textAlign = 'center';
-          placeholder.style.padding = '10px';
-          placeholder.style.width = '100%';
-          placeholder.style.height = '100%';
-          placeholder.style.minHeight = '150px';
-          placeholder.style.borderRadius = '8px';
+          Object.assign(placeholder.style, {
+            backgroundColor: bgColor,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            color: 'white',
+            fontWeight: 'bold',
+            fontSize: '1.5rem',
+            textAlign: 'center',
+            padding: '10px',
+            width: '100%',
+            height: '100%',
+            minHeight: '150px',
+            borderRadius: '8px'
+          });
           placeholder.className = img.className;
           placeholder.innerText = flavorName;
           
-          // Replace the image with our placeholder
           if (img.parentNode) {
             img.parentNode.replaceChild(placeholder, img);
           }
@@ -101,8 +91,6 @@ export const injectShavedIceContent = (): void => {
         console.error('Error processing image:', error);
       }
     });
-    
-    console.log(`Applied path fixing and cache-busting to ${images.length} images`);
   }, 100);
 };
 

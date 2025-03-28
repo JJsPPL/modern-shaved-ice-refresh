@@ -5,46 +5,44 @@ import { injectShavedIceContent } from '../components/shaved-ice/ShavedIceInject
 const ShavedIcePage: React.FC = () => {
   useEffect(() => {
     try {
-      // Force a clean-up of any existing content
+      // Clear existing content
       document.body.innerHTML = '';
       
-      // Add a version timestamp to prevent caching issues
+      // Add version and environment info
       const timestamp = new Date().toISOString();
-      console.log(`Loading shaved ice content, version: ${timestamp}`);
+      const isGitHubPages = window.location.href.includes('github.io');
+      console.log('Loading shaved ice content:', {
+        version: timestamp,
+        isGitHubPages,
+        url: window.location.href
+      });
       
-      // Prepare the body element and inject content
+      // Inject content
       injectShavedIceContent();
       
-      // Log success
-      console.log("Shaved ice content successfully injected");
-      
-      // Add additional debugging for image loading
+      // Add debug logging
       setTimeout(() => {
-        // Log environment information
-        console.log(`Current URL: ${window.location.href}`);
-        console.log(`Is GitHub Pages: ${window.location.href.includes('github.io')}`);
-        
-        // Check all images
         const images = document.querySelectorAll('img');
-        console.log(`Total images on page: ${images.length}`);
-        
-        // Log status of each image
-        images.forEach(img => {
-          console.log(`Image: ${img.src}, Alt: ${img.alt}, Complete: ${img.complete}, Natural size: ${img.naturalWidth}x${img.naturalHeight}`);
+        console.log('Image loading status:', {
+          total: images.length,
+          loaded: Array.from(images).filter(img => img.complete && img.naturalWidth > 0).length,
+          failed: Array.from(images).filter(img => !img.complete || img.naturalWidth === 0).length
         });
         
-        // Check for any loading errors
-        const failedImages = Array.from(images).filter(img => !img.complete || img.naturalWidth === 0);
-        if (failedImages.length > 0) {
-          console.warn(`${failedImages.length} images failed to load properly.`);
-        } else {
-          console.log('All images appear to have loaded successfully.');
-        }
+        // Log details for each image
+        images.forEach(img => {
+          console.log('Image details:', {
+            src: img.src,
+            alt: img.alt,
+            complete: img.complete,
+            naturalSize: `${img.naturalWidth}x${img.naturalHeight}`
+          });
+        });
       }, 2000);
     } catch (error) {
-      console.error("Error injecting shaved ice content:", error);
+      console.error('Error in ShavedIcePage:', error);
       
-      // Provide a fallback error message to the user
+      // Show error message
       document.body.innerHTML = `
         <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; padding: 20px; text-align: center;">
           <h1 style="color: #ff3333; margin-bottom: 20px;">Something went wrong</h1>
@@ -54,11 +52,9 @@ const ShavedIcePage: React.FC = () => {
       `;
     }
     
-    // No cleanup function needed
     return () => {};
   }, []);
 
-  // This component doesn't need to render anything itself as we're injecting content directly
   return null;
 };
 
