@@ -8,7 +8,7 @@ export function getEventsSectionHTML(): string {
     <section id="events" class="section">
       <h2>Memories We've Created</h2>
       <p style="text-align: center; margin-bottom: 2rem;">
-        We bring the joy of premium frozen treats to events all across Oregon. Take a look at some of our favorite moments!
+        We bring the joy of premium frozen treats to events across NW Oregon and SW Washington. Take a look at some of our favorite moments!
       </p>
       <div class="events-grid">
         <div class="event-img-container">
