@@ -23,11 +23,25 @@ const ShavedIcePage: React.FC = () => {
         // This will be handled by the image loading strategy in injectShavedIceContent
       }
       
-      // Inject content with images from GitHub repository
+      // Inject content with images from GitHub repository and uploaded images
       injectShavedIceContent();
       
-      // Monitor image loading
+      // Special handling for uploaded images
       setTimeout(() => {
+        const heroImage = document.querySelector('.hero-section img');
+        if (heroImage) {
+          console.log('Hero image found, ensuring proper loading');
+          // Make sure the image is loaded correctly
+          heroImage.onerror = () => {
+            console.error('Hero image failed to load, attempting fallback');
+            // If GitHub Pages has issues with the path, try a relative path
+            if (isGitHubPages) {
+              (heroImage as HTMLImageElement).src = 'lovable-uploads/86260f6b-8644-47d2-b65e-20f606c12303.png';
+            }
+          };
+        }
+        
+        // Monitor all images
         const images = document.querySelectorAll('img');
         console.log(`Monitoring ${images.length} images for loading status`);
         
@@ -41,7 +55,7 @@ const ShavedIcePage: React.FC = () => {
         });
       }, 1000);
       
-      console.log('Page rendered successfully with images from GitHub repository');
+      console.log('Page rendered successfully with updated hero image');
     } catch (error) {
       console.error('Error in ShavedIcePage:', error);
       
