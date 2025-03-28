@@ -45,7 +45,7 @@ export const injectShavedIceContent = (): void => {
     document.head.appendChild(expires);
   }
   
-  // Setup images for lightbox functionality
+  // Setup images for lightbox functionality with a slight delay to ensure DOM is ready
   setTimeout(() => {
     setupImageLightbox();
   }, 500);
@@ -60,29 +60,79 @@ function setupImageLightbox(): void {
   const modal = document.getElementById('image-modal');
   const modalImg = document.getElementById('modal-img') as HTMLImageElement | null;
   const clickableImages = document.querySelectorAll('.clickable');
+  const prevBtn = document.querySelector('.modal-prev') as HTMLElement | null;
+  const nextBtn = document.querySelector('.modal-next') as HTMLElement | null;
+  const closeBtn = document.querySelector('.modal-close') as HTMLElement | null;
   
-  if (!modal || !modalImg) {
+  if (!modal || !modalImg || !prevBtn || !nextBtn || !closeBtn) {
     console.error('Lightbox modal elements not found');
     return;
   }
   
-  console.log(`Found ${clickableImages.length} clickable images to set up for lightbox`);
+  const imageArray = Array.from(clickableImages) as HTMLImageElement[];
+  let currentIndex = 0;
+  
+  console.log(`Found ${imageArray.length} clickable images to set up for lightbox`);
   
   // Add click event listener to each clickable image
-  clickableImages.forEach((img: Element) => {
-    if (img instanceof HTMLImageElement) {
-      // Use an explicit typed function to ensure TypeScript knows `this` is HTMLImageElement
-      img.onclick = function(this: HTMLImageElement) {
-        if (modal) {
-          modal.classList.add('active');
-        }
+  imageArray.forEach((img, index) => {
+    img.onclick = function() {
+      if (modal) {
+        modal.classList.add('active');
         if (modalImg) {
           modalImg.src = this.src;
+          currentIndex = index;
+          console.log(`Opened lightbox with image ${index + 1}: ${this.src}`);
         }
-      };
-      console.log(`Set up lightbox for image: ${img.src}`);
-    } else {
-      console.log('Found non-image clickable element', img);
+      }
+    };
+  });
+  
+  // Navigation buttons
+  prevBtn.onclick = function() {
+    currentIndex = (currentIndex - 1 + imageArray.length) % imageArray.length;
+    if (modalImg && imageArray[currentIndex]) {
+      modalImg.src = imageArray[currentIndex].src;
+      console.log(`Navigated to previous image: ${currentIndex + 1}`);
+    }
+  };
+  
+  nextBtn.onclick = function() {
+    currentIndex = (currentIndex + 1) % imageArray.length;
+    if (modalImg && imageArray[currentIndex]) {
+      modalImg.src = imageArray[currentIndex].src;
+      console.log(`Navigated to next image: ${currentIndex + 1}`);
+    }
+  };
+  
+  // Close button
+  closeBtn.onclick = function() {
+    if (modal) {
+      modal.classList.remove('active');
+      console.log('Closed lightbox');
+    }
+  };
+  
+  // Close when clicking outside the image
+  modal.onclick = function(event) {
+    if (event.target === modal) {
+      modal.classList.remove('active');
+      console.log('Closed lightbox (clicked outside image)');
+    }
+  };
+  
+  // Keyboard navigation
+  document.addEventListener('keydown', function(event) {
+    if (!modal || !modal.classList.contains('active')) return;
+    
+    if (event.key === 'ArrowLeft') {
+      prevBtn.click();
+    } else if (event.key === 'ArrowRight') {
+      nextBtn.click();
+    } else if (event.key === 'Escape') {
+      closeBtn.click();
     }
   });
+  
+  console.log('Lightbox navigation setup complete');
 }
