@@ -7,6 +7,15 @@ export const responsiveStyles = `
   @media (max-width: 1024px) {
     .menu-grid, .events-grid {
       grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 1rem;
+    }
+    
+    .menu-img, .event-img {
+      height: 150px;
+    }
+    
+    .section {
+      padding: 2rem 1.5rem;
     }
   }
 
@@ -15,7 +24,7 @@ export const responsiveStyles = `
       position: relative;
       height: auto;
       width: 100%;
-      padding: 1.5rem;
+      padding: 1rem;
     }
 
     .sidebar img.logo {
@@ -27,48 +36,83 @@ export const responsiveStyles = `
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 0.5rem;
+      gap: 0.25rem;
     }
 
     .nav-link {
       margin: 0.25rem;
-      padding: 0.5rem 1rem;
+      padding: 0.5rem;
+      font-size: 0.9rem;
     }
 
     .content {
       margin-left: 0; /* Remove margin for mobile */
+      padding: 1rem;
     }
 
     .section {
-      padding: 2rem 1rem;
+      padding: 1.5rem 1rem;
+      margin-bottom: 1.5rem;
     }
 
     .menu-grid, .events-grid, .event-cards, .sponsors-grid {
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.75rem;
+    }
+    
+    .menu-img, .event-img {
+      height: 120px;
+    }
+    
+    .menu-caption {
+      font-size: 0.8rem;
     }
 
     .contact-links {
       flex-direction: column;
-      gap: 1.5rem;
+      gap: 1rem;
     }
 
     .modal-content {
-      max-width: 95%;
+      max-width: 90%;
+      max-height: 80vh;
     }
 
     .modal-nav {
-      width: 50px;
-      height: 50px;
-      font-size: 2rem;
+      width: 40px;
+      height: 40px;
+      font-size: 1.5rem;
     }
 
     .modal-prev {
-      left: 1rem;
+      left: 0.5rem;
     }
 
     .modal-next {
-      right: 1rem;
+      right: 0.5rem;
+    }
+    
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .menu-grid, .events-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.5rem;
+    }
+    
+    .menu-img, .event-img {
+      height: 100px;
+    }
+    
+    .menu-caption {
+      font-size: 0.7rem;
+    }
+    
+    .event-cards, .sponsors-grid {
+      grid-template-columns: 1fr;
     }
   }
 
@@ -78,4 +122,3 @@ export const responsiveStyles = `
     }
   }
 `;
-

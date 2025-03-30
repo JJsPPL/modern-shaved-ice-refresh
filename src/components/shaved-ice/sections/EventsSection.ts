@@ -12,22 +12,52 @@ export function getEventsSectionHTML(): string {
       </p>
       <div class="events-grid">
         <div class="event-img-container">
-          <img src="https://github.com/JJsPPL/modern-shaved-ice-refresh/raw/main/Roror1.jpeg" alt="JJ's & Roro's Event 1" class="event-img clickable">
+          <img src="https://github.com/JJsPPL/modern-shaved-ice-refresh/raw/main/Roror1.jpeg" 
+               alt="JJ's & Roro's Event 1" 
+               class="event-img clickable" 
+               loading="lazy" 
+               width="300" 
+               height="200">
         </div>
         <div class="event-img-container">
-          <img src="https://github.com/JJsPPL/modern-shaved-ice-refresh/raw/main/Roro2.jpeg" alt="JJ's & Roro's Event 2" class="event-img clickable">
+          <img src="https://github.com/JJsPPL/modern-shaved-ice-refresh/raw/main/Roro2.jpeg" 
+               alt="JJ's & Roro's Event 2" 
+               class="event-img clickable" 
+               loading="lazy" 
+               width="300" 
+               height="200">
         </div>
         <div class="event-img-container">
-          <img src="https://github.com/JJsPPL/modern-shaved-ice-refresh/raw/main/JJS%20SHAVED%20ICE%20JONATHAN%20PABLO2.jpeg" alt="JJ's Event 3" class="event-img clickable">
+          <img src="https://github.com/JJsPPL/modern-shaved-ice-refresh/raw/main/JJS%20SHAVED%20ICE%20JONATHAN%20PABLO2.jpeg" 
+               alt="JJ's Event 3" 
+               class="event-img clickable" 
+               loading="lazy" 
+               width="300" 
+               height="200">
         </div>
         <div class="event-img-container">
-          <img src="https://github.com/JJsPPL/modern-shaved-ice-refresh/raw/main/JJS%20SHAVED%20ICE%20JONATHAN%20PABLO1.jpeg" alt="JJ's Event 4" class="event-img clickable">
+          <img src="https://github.com/JJsPPL/modern-shaved-ice-refresh/raw/main/JJS%20SHAVED%20ICE%20JONATHAN%20PABLO1.jpeg" 
+               alt="JJ's Event 4" 
+               class="event-img clickable" 
+               loading="lazy" 
+               width="300" 
+               height="200">
         </div>
         <div class="event-img-container">
-          <img src="https://github.com/JJsPPL/modern-shaved-ice-refresh/raw/main/helpers2.jpeg" alt="JJ's Helper Highlights" class="event-img clickable">
+          <img src="https://github.com/JJsPPL/modern-shaved-ice-refresh/raw/main/helpers2.jpeg" 
+               alt="JJ's Helper Highlights" 
+               class="event-img clickable" 
+               loading="lazy" 
+               width="300" 
+               height="200">
         </div>
         <div class="event-img-container">
-          <img src="https://github.com/JJsPPL/modern-shaved-ice-refresh/raw/main/helper3.jpeg" alt="JJ's Helper Event" class="event-img clickable">
+          <img src="https://github.com/JJsPPL/modern-shaved-ice-refresh/raw/main/helper3.jpeg" 
+               alt="JJ's Helper Event" 
+               class="event-img clickable" 
+               loading="lazy" 
+               width="300" 
+               height="200">
         </div>
       </div>
     </section>`;

@@ -27,30 +27,39 @@ export const injectShavedIceContent = (): void => {
   // Inject the HTML content
   document.body.innerHTML = getFullPageTemplate(styles, setupEventListeners);
   
-  // Add a meta tag to prevent caching on GitHub Pages
-  if (isGitHubPages) {
-    const meta = document.createElement('meta');
-    meta.httpEquiv = 'Cache-Control';
-    meta.content = 'no-cache, no-store, must-revalidate';
-    document.head.appendChild(meta);
-    
-    const pragma = document.createElement('meta');
-    pragma.httpEquiv = 'Pragma';
-    pragma.content = 'no-cache';
-    document.head.appendChild(pragma);
-    
-    const expires = document.createElement('meta');
-    expires.httpEquiv = 'Expires';
-    expires.content = '0';
-    document.head.appendChild(expires);
-  }
+  // Add meta tags for performance optimization
+  const metaTags = [
+    { httpEquiv: 'Cache-Control', content: 'no-cache, no-store, must-revalidate' },
+    { httpEquiv: 'Pragma', content: 'no-cache' },
+    { httpEquiv: 'Expires', content: '0' },
+    { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0' }
+  ];
+  
+  metaTags.forEach(meta => {
+    const metaElement = document.createElement('meta');
+    if (meta.httpEquiv) {
+      metaElement.httpEquiv = meta.httpEquiv;
+    }
+    if (meta.name) {
+      metaElement.name = meta.name;
+    }
+    metaElement.content = meta.content;
+    document.head.appendChild(metaElement);
+  });
+  
+  // Add preload for hero image
+  const preloadHeroImage = document.createElement('link');
+  preloadHeroImage.rel = 'preload';
+  preloadHeroImage.as = 'image';
+  preloadHeroImage.href = '/lovable-uploads/86260f6b-8644-47d2-b65e-20f606c12303.png';
+  document.head.appendChild(preloadHeroImage);
   
   // Setup images for lightbox functionality with a slight delay to ensure DOM is ready
   setTimeout(() => {
     setupImageLightbox();
   }, 500);
 
-  console.log('Page rendered with images from GitHub repository');
+  console.log('Page rendered with optimized images from GitHub repository');
 };
 
 /**

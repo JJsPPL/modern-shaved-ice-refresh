@@ -13,7 +13,12 @@ export function getRentalsSectionHTML(): string {
       <div class="rentals-grid">
         <div class="rental-card">
           <div class="rental-img-container">
-            <img src="/lovable-uploads/aaca400b-0c11-481a-8045-48e1a60af405.png" alt="Bubble House Rental" class="rental-img">
+            <img src="/lovable-uploads/aaca400b-0c11-481a-8045-48e1a60af405.png" 
+                 alt="Bubble House Rental" 
+                 class="rental-img"
+                 loading="lazy"
+                 width="400"
+                 height="300">
           </div>
           <div class="rental-info">
             <h3 class="rental-title">Bubble House</h3>
