@@ -21,7 +21,7 @@ export function getSponsorsSectionHTML(): string {
         </div>
         <div class="sponsor-card">
           <h3 class="sponsor-title">Sac-Sac Corp LLC</h3>
-          <p class="sponsor-desc">Connecting local talent. Just ask us how! Sac-Sac Corp is committed to building stronger communities through meaningful connections.</p>
+          <p class="sponsor-desc">Sac-Sac Corp is committed to building stronger communities through meaningful connections by connecting local talent. Just ask us how!</p>
         </div>
       </div>
     </section>`;
