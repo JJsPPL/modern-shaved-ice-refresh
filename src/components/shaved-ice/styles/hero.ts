@@ -30,11 +30,14 @@ export const heroStyles = `
   /* Logo styling */
   .logo-option {
     cursor: pointer;
-    border-radius: 8px;
+    border-radius: 50%; /* Make it perfectly circular */
     padding: 5px;
     margin-bottom: 10px;
     transition: all 0.3s ease;
     position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
   }
   
   .logo-option:hover {
@@ -44,10 +47,11 @@ export const heroStyles = `
   
   .logo-svg {
     width: 100%;
-    height: auto;
-    max-width: 200px;
+    height: 100%;
+    object-fit: contain;
     display: block;
     margin: 0 auto;
+    border-radius: 50%; /* Ensure the image is also circular */
   }
   
   /* Logo description */

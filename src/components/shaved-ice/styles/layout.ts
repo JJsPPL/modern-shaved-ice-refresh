@@ -34,6 +34,7 @@ export const layoutStyles = `
     border-radius: 50%;
     padding: 5px;
     transition: var(--transition);
+    overflow: hidden;
   }
   
   .logo-option:hover {
@@ -43,6 +44,7 @@ export const layoutStyles = `
   .logo-svg {
     width: 100%;
     height: 100%;
+    object-fit: contain;
     border-radius: 50%;
   }
 

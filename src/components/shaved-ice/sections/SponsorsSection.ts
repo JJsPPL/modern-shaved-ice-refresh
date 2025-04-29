@@ -17,7 +17,7 @@ export function getSponsorsSectionHTML(): string {
         </div>
         <div class="sponsor-card">
           <h3 class="sponsor-title">DinoTradez LLC</h3>
-          <p class="sponsor-desc">Enhance your financial approach with Market Fundamental and Technical Analysis to maximize probabilities in your favor. Visit <a href="https://www.dinotradez.com" target="_blank">DinoTradez</a> to learn more.</p>
+          <p class="sponsor-desc">Enhance your financial approach with Market Fundamental and Technical Analysis to maximize probabilities in your favor. Visit <a href="https://www.dinotradez.com" target="_blank">DinoTradez.com</a> to learn more.</p>
         </div>
         <div class="sponsor-card">
           <h3 class="sponsor-title">Sac-Sac Corp LLC</h3>

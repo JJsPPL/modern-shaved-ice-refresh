@@ -1,23 +1,27 @@
 
 /**
- * Script to handle logo selection in the sidebar
+ * Script to handle logo display in the sidebar
  */
 export function initLogoSelector(): void {
   // Wait for DOM to be fully loaded
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', setupLogoSelector);
+    document.addEventListener('DOMContentLoaded', setupLogo);
   } else {
-    setupLogoSelector();
+    setupLogo();
   }
 }
 
-function setupLogoSelector(): void {
+function setupLogo(): void {
   const logoOption = document.querySelector('.logo-option');
   
   if (logoOption) {
-    // Ensure the logo option is selected
-    logoOption.classList.add('selected');
+    // Add preload to the image for faster loading
+    const logoImg = logoOption.querySelector('img');
+    if (logoImg && !logoImg.hasAttribute('loading')) {
+      logoImg.setAttribute('loading', 'eager');
+      logoImg.setAttribute('importance', 'high');
+    }
     
-    console.log('Logo initialized: Bull Shield (Modified)');
+    console.log('New JJs Shaved Ice Logo initialized');
   }
 }
