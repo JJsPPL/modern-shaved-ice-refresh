@@ -9,7 +9,7 @@ export function getSidebarHTML(): string {
     <div class="logo-container">
       <!-- New JJ's Shaved Ice Logo -->
       <div class="logo-option">
-        <img src="/lovable-uploads/334c44c7-3e2a-4105-9545-cbdb1de65800.png" alt="JJ's Shaved Ice Logo" class="logo-svg" />
+        <img src="/lovable-uploads/8a353321-e0e5-4d7f-9b67-877147c62617.png" alt="JJ's Shaved Ice Logo" class="logo-svg" />
       </div>
       
       <h1>JJ's Premium Delights</h1>

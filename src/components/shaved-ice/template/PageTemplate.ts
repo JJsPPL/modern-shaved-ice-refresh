@@ -20,6 +20,7 @@ export function getFullPageTemplate(styles: string, scripts: string): string {
   
   <!-- Preload critical assets -->
   <link rel="preload" href="/lovable-uploads/86260f6b-8644-47d2-b65e-20f606c12303.png" as="image">
+  <link rel="preload" href="/lovable-uploads/8a353321-e0e5-4d7f-9b67-877147c62617.png" as="image">
   
   <!-- Preconnect to GitHub -->
   <link rel="preconnect" href="https://github.com">

@@ -20,8 +20,16 @@ function setupLogo(): void {
     if (logoImg && !logoImg.hasAttribute('loading')) {
       logoImg.setAttribute('loading', 'eager');
       logoImg.setAttribute('importance', 'high');
+      
+      // Ensure proper loading of the new logo
+      logoImg.onerror = () => {
+        console.error('Error loading logo, trying fallback');
+        if (logoImg instanceof HTMLImageElement) {
+          logoImg.src = '/lovable-uploads/8a353321-e0e5-4d7f-9b67-877147c62617.png';
+        }
+      };
     }
     
-    console.log('New JJs Shaved Ice Logo initialized');
+    console.log('Updated JJs Shaved Ice Logo initialized');
   }
 }
