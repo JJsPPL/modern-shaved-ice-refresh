@@ -36,22 +36,6 @@ export function getEventsSectionHTML(): string {
                height="200">
         </div>
         <div class="event-img-container">
-          <img src="https://github.com/JJsPPL/modern-shaved-ice-refresh/raw/main/JJS%20SHAVED%20ICE%20JONATHAN%20PABLO1.jpeg" 
-               alt="JJ's Event 4" 
-               class="event-img clickable" 
-               loading="lazy" 
-               width="300" 
-               height="200">
-        </div>
-        <div class="event-img-container">
-          <img src="https://github.com/JJsPPL/modern-shaved-ice-refresh/raw/main/helpers2.jpeg" 
-               alt="JJ's Helper Highlights" 
-               class="event-img clickable" 
-               loading="lazy" 
-               width="300" 
-               height="200">
-        </div>
-        <div class="event-img-container">
           <img src="https://github.com/JJsPPL/modern-shaved-ice-refresh/raw/main/helper3.jpeg" 
                alt="JJ's Helper Event" 
                class="event-img clickable" 

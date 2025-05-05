@@ -12,19 +12,19 @@ export function getUpcomingEventsSectionHTML(): string {
       </p>
       <div class="event-cards">
         <div class="event-card">
-          <h3 class="event-title">Anavai O Te Ora's 2nd Annual Student Showcase</h3>
-          <div class="event-details">
-            <p class="event-date">📅 May 4, 2025</p>
-            <p class="event-location">📍 Ft. Vancouver High School - Vancouver, WA</p>
-            <p>Join us as we support the cultural showcase featuring talented students performing traditional dances and sharing their heritage!</p>
-          </div>
-        </div>
-        <div class="event-card">
           <h3 class="event-title">Hillsboro Pride Party</h3>
           <div class="event-details">
             <p class="event-date">📅 June 7, 2025</p>
             <p class="event-location">📍 Shute Park - Hillsboro, Oregon</p>
             <p>Join us for a celebration of community and diversity while enjoying our refreshing treats that will make your day even more special!</p>
+          </div>
+        </div>
+        <div class="event-card">
+          <h3 class="event-title">Guam 81st Liberation Celebration</h3>
+          <div class="event-details">
+            <p class="event-date">📅 July 26, 2025</p>
+            <p class="event-location">📍 Willis Tucker Park, 6705 Puget Park Dr, Snohomish WA 98296</p>
+            <p>Join us in commemorating this important historical celebration while enjoying our premium shaved ice and delicious treats!</p>
           </div>
         </div>
         <div class="event-card">
