@@ -11,6 +11,15 @@ export function getEventsSectionHTML(): string {
         We bring the joy of premium treats to events across NW Oregon and SW Washington. Take a look at some of our favorite moments!
       </p>
       <div class="events-grid">
+        <!-- Switched first and second photos -->
+        <div class="event-img-container">
+          <img src="/lovable-uploads/261b6532-8b5c-40ca-850b-66d6a045afd8.png" 
+               alt="JJ's Team Event" 
+               class="event-img clickable" 
+               loading="lazy" 
+               width="300" 
+               height="200">
+        </div>
         <div class="event-img-container">
           <img src="https://github.com/JJsPPL/modern-shaved-ice-refresh/raw/main/helper3.jpeg" 
                alt="JJ's Helper Event" 
@@ -20,14 +29,6 @@ export function getEventsSectionHTML(): string {
                height="200">
         </div>
         <!-- New images added as requested -->
-        <div class="event-img-container">
-          <img src="/lovable-uploads/261b6532-8b5c-40ca-850b-66d6a045afd8.png" 
-               alt="JJ's Team Event" 
-               class="event-img clickable" 
-               loading="lazy" 
-               width="300" 
-               height="200">
-        </div>
         <div class="event-img-container">
           <img src="/lovable-uploads/d9ca56cc-9bf2-4627-910f-69d34b51cbf5.png" 
                alt="JJ's Shaved Ice Station" 
