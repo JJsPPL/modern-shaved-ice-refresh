@@ -43,6 +43,39 @@ export function getEventsSectionHTML(): string {
                width="300" 
                height="200">
         </div>
+        <!-- New images added as requested -->
+        <div class="event-img-container">
+          <img src="/lovable-uploads/261b6532-8b5c-40ca-850b-66d6a045afd8.png" 
+               alt="JJ's Team Event" 
+               class="event-img clickable" 
+               loading="lazy" 
+               width="300" 
+               height="200">
+        </div>
+        <div class="event-img-container">
+          <img src="/lovable-uploads/d9ca56cc-9bf2-4627-910f-69d34b51cbf5.png" 
+               alt="JJ's Shaved Ice Station" 
+               class="event-img clickable" 
+               loading="lazy" 
+               width="300" 
+               height="200">
+        </div>
+        <div class="event-img-container">
+          <img src="/lovable-uploads/7ee0968d-ac8c-4421-80f3-22c9bcfadade.png" 
+               alt="JJ's Event Stand with Customers" 
+               class="event-img clickable" 
+               loading="lazy" 
+               width="300" 
+               height="200">
+        </div>
+        <div class="event-img-container">
+          <img src="/lovable-uploads/4dd453c5-eaf7-4788-a1f9-f12271a30cf1.png" 
+               alt="JJ's Serving Customer" 
+               class="event-img clickable" 
+               loading="lazy" 
+               width="300" 
+               height="200">
+        </div>
       </div>
     </section>`;
 }
