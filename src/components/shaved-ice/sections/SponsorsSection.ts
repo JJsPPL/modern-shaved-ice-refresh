@@ -12,8 +12,8 @@ export function getSponsorsSectionHTML(): string {
       </p>
       <div class="sponsors-grid">
         <div class="sponsor-card">
-          <h3 class="sponsor-title">PACIFICNWEXTREMEFISHINGFORECAST.COM</h3>
-          <p class="sponsor-desc">Your premier source for accurate fishing forecasts across the Pacific Northwest. Get real-time insights on the best fishing conditions and locations.</p>
+          <h3 class="sponsor-title">Pacific NW Extreme Fishing Forecast</h3>
+          <p class="sponsor-desc">Your premier source for accurate fishing forecasts across the Pacific Northwest. Get real-time insights on the best fishing conditions and locations. Visit <a href="https://www.pacificnwextremefishingforecast.com" target="_blank">PACIFICNWEXTREMEFISHINGFORECAST.COM</a> to learn more.</p>
         </div>
         <div class="sponsor-card">
           <h3 class="sponsor-title">DinoTradez LLC</h3>
