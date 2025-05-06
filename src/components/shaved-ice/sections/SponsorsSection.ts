@@ -12,12 +12,16 @@ export function getSponsorsSectionHTML(): string {
       </p>
       <div class="sponsors-grid">
         <div class="sponsor-card">
-          <h3 class="sponsor-title">JQP Corp LLC</h3>
-          <p class="sponsor-desc">Providing innovative solutions for all your business needs! JQP Corp is dedicated to helping businesses thrive in today's competitive market.</p>
+          <h3 class="sponsor-title">PACIFICNWEXTREMEFISHINGFORECAST.COM</h3>
+          <p class="sponsor-desc">Your premier source for accurate fishing forecasts across the Pacific Northwest. Get real-time insights on the best fishing conditions and locations.</p>
         </div>
         <div class="sponsor-card">
           <h3 class="sponsor-title">DinoTradez LLC</h3>
           <p class="sponsor-desc">Enhance your financial approach with Market Fundamental and Technical Analysis to maximize probabilities in your favor. Visit <a href="https://www.dinotradez.com" target="_blank">DinoTradez.com</a> to learn more.</p>
+        </div>
+        <div class="sponsor-card">
+          <h3 class="sponsor-title">JQP Corp LLC</h3>
+          <p class="sponsor-desc">Providing innovative solutions for all your business needs! JQP Corp is dedicated to helping businesses thrive in today's competitive market.</p>
         </div>
         <div class="sponsor-card">
           <h3 class="sponsor-title">Sac-Sac Corp LLC</h3>
