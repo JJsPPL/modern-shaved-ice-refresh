@@ -20,8 +20,8 @@ export function getSponsorsSectionHTML(): string {
           <p class="sponsor-desc">Enhance your financial approach with Market Fundamental and Technical Analysis to maximize probabilities in your favor. Visit <a href="https://www.dinotradez.com" target="_blank">DinoTradez.com</a> to learn more.</p>
         </div>
         <div class="sponsor-card">
-          <h3 class="sponsor-title">JQP Corp LLC</h3>
-          <p class="sponsor-desc">Providing innovative solutions for all your business needs! JQP Corp is dedicated to helping businesses thrive in today's competitive market.</p>
+          <h3 class="sponsor-title">JJsCaters.com</h3>
+          <p class="sponsor-desc">Professional catering services for all your event needs. Let us make your next gathering delicious and memorable. Visit <a href="https://www.jjscaters.com" target="_blank">JJsCaters.com</a> to learn more.</p>
         </div>
         <div class="sponsor-card">
           <h3 class="sponsor-title">Sac-Sac Corp LLC</h3>
