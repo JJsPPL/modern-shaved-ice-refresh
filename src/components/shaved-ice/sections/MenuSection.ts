@@ -107,33 +107,6 @@ export function getMenuSectionHTML(): string {
                height="200">
           <div class="menu-caption">Pickled Eggs</div>
         </div>
-        <div class="menu-item">
-          <img src="https://github.com/JJsPPL/modern-shaved-ice-refresh/raw/main/Pickled%20Papaya.jpeg" 
-               alt="Pickled Papaya" 
-               class="menu-img clickable"
-               loading="lazy"
-               width="250"
-               height="200">
-          <div class="menu-caption">Pickled Papaya</div>
-        </div>
-        <div class="menu-item">
-          <img src="https://github.com/JJsPPL/modern-shaved-ice-refresh/raw/main/Fiesta%20Plate%20Chicken.jpeg" 
-               alt="Fiesta Plate BBQ Chicken" 
-               class="menu-img clickable"
-               loading="lazy"
-               width="250"
-               height="200">
-          <div class="menu-caption">Fiesta Plate BBQ Chicken</div>
-        </div>
-        <div class="menu-item">
-          <img src="https://github.com/JJsPPL/modern-shaved-ice-refresh/raw/main/Fiesta%20Plate%20Briskett.jpeg" 
-               alt="Fiesta Plate Smoked Brisket" 
-               class="menu-img clickable"
-               loading="lazy"
-               width="250"
-               height="200">
-          <div class="menu-caption">Fiesta Plate Smoked Brisket</div>
-        </div>
       </div>
     </section>`;
 }
