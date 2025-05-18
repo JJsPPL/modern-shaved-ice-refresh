@@ -98,15 +98,6 @@ export function getMenuSectionHTML(): string {
                height="200">
           <div class="menu-caption">Calamanci Lemonade</div>
         </div>
-        <div class="menu-item">
-          <img src="https://github.com/JJsPPL/modern-shaved-ice-refresh/raw/main/Pickled%20Eggs.jpeg" 
-               alt="Pickled Eggs" 
-               class="menu-img clickable"
-               loading="lazy"
-               width="250"
-               height="200">
-          <div class="menu-caption">Pickled Eggs</div>
-        </div>
       </div>
     </section>`;
 }
