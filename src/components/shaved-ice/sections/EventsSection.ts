@@ -22,14 +22,6 @@ export function getEventsSectionHTML(): string {
         </div>
         <!-- New images added as requested -->
         <div class="event-img-container">
-          <img src="/lovable-uploads/d9ca56cc-9bf2-4627-910f-69d34b51cbf5.png" 
-               alt="JJ's Shaved Ice Station" 
-               class="event-img clickable" 
-               loading="lazy" 
-               width="300" 
-               height="200">
-        </div>
-        <div class="event-img-container">
           <img src="/lovable-uploads/7ee0968d-ac8c-4421-80f3-22c9bcfadade.png" 
                alt="JJ's Event Stand with Customers" 
                class="event-img clickable" 
