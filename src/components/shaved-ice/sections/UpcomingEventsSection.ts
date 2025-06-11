@@ -12,11 +12,12 @@ export function getUpcomingEventsSectionHTML(): string {
       </p>
       <div class="event-cards">
         <div class="event-card">
-          <h3 class="event-title">Hillsboro Pride Party</h3>
+          <h3 class="event-title">Summer Solstice Fair</h3>
           <div class="event-details">
-            <p class="event-date">📅 June 7, 2025</p>
-            <p class="event-location">📍 Shute Park - Hillsboro, Oregon</p>
-            <p>Join us for a celebration of community and diversity while enjoying our refreshing treats that will make your day even more special!</p>
+            <p class="event-date">📅 June 22, 2025</p>
+            <p class="event-location">📍 NE Birch St - Hillsboro, Oregon</p>
+            <p>Join us for a celebration of summer's arrival with refreshing treats perfect for the longest day of the year!</p>
+            <p><a href="https://allevents.in/hillsboro/summer-solstice-fair/200028275488348" target="_blank" style="color: var(--primary); text-decoration: underline;">Event Details</a></p>
           </div>
         </div>
         <div class="event-card">
