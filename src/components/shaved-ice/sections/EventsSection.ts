@@ -1,4 +1,3 @@
-
 /**
  * Returns the HTML for the events section
  */
@@ -11,7 +10,40 @@ export function getEventsSectionHTML(): string {
         We bring the joy of premium treats to events across NW Oregon and SW Washington. Take a look at some of our favorite moments!
       </p>
       <div class="events-grid">
-        <!-- First photo -->
+        <!-- New uploaded photos added to the beginning -->
+        <div class="event-img-container">
+          <img src="/lovable-uploads/ab5e71de-f1c3-4613-ab47-49bda3f81efa.png" 
+               alt="JJ's Team at Event" 
+               class="event-img clickable" 
+               loading="lazy" 
+               width="300" 
+               height="200">
+        </div>
+        <div class="event-img-container">
+          <img src="/lovable-uploads/b6788680-a3d6-4467-8955-b75f18ad5aef.png" 
+               alt="JJ's Shaved Ice Stand Setup" 
+               class="event-img clickable" 
+               loading="lazy" 
+               width="300" 
+               height="200">
+        </div>
+        <div class="event-img-container">
+          <img src="/lovable-uploads/b8a67eb0-a6d8-42e4-9f28-d5df3407e715.png" 
+               alt="JJ's Team Members Having Fun" 
+               class="event-img clickable" 
+               loading="lazy" 
+               width="300" 
+               height="200">
+        </div>
+        <div class="event-img-container">
+          <img src="/lovable-uploads/1c5fccfc-47d5-46e3-9234-825d72d50d81.png" 
+               alt="JJ's Team Selfie at Event" 
+               class="event-img clickable" 
+               loading="lazy" 
+               width="300" 
+               height="200">
+        </div>
+        <!-- Existing photos -->
         <div class="event-img-container">
           <img src="/lovable-uploads/261b6532-8b5c-40ca-850b-66d6a045afd8.png" 
                alt="JJ's Team Event" 
@@ -20,7 +52,6 @@ export function getEventsSectionHTML(): string {
                width="300" 
                height="200">
         </div>
-        <!-- New images added as requested -->
         <div class="event-img-container">
           <img src="/lovable-uploads/7ee0968d-ac8c-4421-80f3-22c9bcfadade.png" 
                alt="JJ's Event Stand with Customers" 
@@ -37,7 +68,6 @@ export function getEventsSectionHTML(): string {
                width="300" 
                height="200">
         </div>
-        <!-- Moving the first three original photos to the end -->
         <div class="event-img-container">
           <img src="https://github.com/JJsPPL/modern-shaved-ice-refresh/raw/main/Roror1.jpeg" 
                alt="JJ's & Roro's Event 1" 
