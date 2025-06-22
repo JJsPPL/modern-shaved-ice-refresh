@@ -6,6 +6,24 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JJ's Shaved Ice | Premium Frozen Treats & Delights</title>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GHQ1RNLSQX"></script>
+    <script>
+      console.log('🔍 GA Index Debug: Google Analytics loading from index.html');
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){
+        console.log('🔍 GA Index Debug: gtag called with:', arguments);
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-GHQ1RNLSQX', {
+        debug_mode: true,
+        send_page_view: true
+      });
+      console.log('🔍 GA Index Debug: Google Analytics configured');
+    </script>
+    
     <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&family=Lobster&display=swap"
