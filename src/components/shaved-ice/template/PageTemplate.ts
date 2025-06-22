@@ -18,13 +18,45 @@ export function getFullPageTemplate(styles: string, scripts: string): string {
   <meta name="author" content="Jonathan Pablo"/>
   <title>JJ's Shaved Ice | Premium Frozen Treats & Delights</title>
   
-  <!-- Google Analytics -->
+  <!-- Google Analytics with debugging -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-GHQ1RNLSQX"></script>
   <script>
+    console.log('🔍 GA Debug: Starting Google Analytics initialization');
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag(){
+      console.log('🔍 GA Debug: gtag called with arguments:', arguments);
+      dataLayer.push(arguments);
+    }
     gtag('js', new Date());
-    gtag('config', 'G-GHQ1RNLSQX');
+    gtag('config', 'G-GHQ1RNLSQX', {
+      debug_mode: true,
+      send_page_view: true
+    });
+    console.log('🔍 GA Debug: Google Analytics configured for G-GHQ1RNLSQX');
+    
+    // Test if gtag is working
+    window.addEventListener('load', function() {
+      console.log('🔍 GA Debug: Page loaded, testing gtag functionality');
+      if (typeof gtag === 'function') {
+        console.log('✅ GA Debug: gtag function is available');
+        // Send a test event
+        gtag('event', 'page_view_debug', {
+          page_title: document.title,
+          page_location: window.location.href,
+          debug_mode: true
+        });
+        console.log('🔍 GA Debug: Test event sent');
+      } else {
+        console.error('❌ GA Debug: gtag function is not available');
+      }
+      
+      // Check if GA script loaded
+      const gaScripts = document.querySelectorAll('script[src*="googletagmanager"]');
+      console.log('🔍 GA Debug: Found', gaScripts.length, 'Google Analytics scripts');
+      
+      // Check dataLayer
+      console.log('🔍 GA Debug: dataLayer contents:', window.dataLayer);
+    });
   </script>
   
   <!-- Preload critical assets -->
@@ -57,6 +89,19 @@ export function getFullPageTemplate(styles: string, scripts: string): string {
     // Defer non-critical JavaScript
     window.addEventListener('load', function() {
       ${scripts}
+      
+      // Additional GA debugging after page load
+      console.log('🔍 GA Debug: Page fully loaded');
+      console.log('🔍 GA Debug: Current URL:', window.location.href);
+      console.log('🔍 GA Debug: Document title:', document.title);
+      console.log('🔍 GA Debug: User agent:', navigator.userAgent);
+      
+      // Check if we're on the correct domain
+      if (window.location.hostname === 'jjsshavedice.com' || window.location.hostname === 'www.jjsshavedice.com') {
+        console.log('✅ GA Debug: Correct domain detected');
+      } else {
+        console.log('⚠️ GA Debug: Running on different domain:', window.location.hostname);
+      }
     });
   </script>
 </body>
