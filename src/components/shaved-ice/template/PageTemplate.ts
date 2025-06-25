@@ -19,7 +19,7 @@ export function getFullPageTemplate(styles: string, scripts: string): string {
   <title>JJ's Shaved Ice | Premium Frozen Treats & Delights</title>
   
   <!-- Google Analytics with debugging -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GHQ1RNLSQX"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y6C5H9KHEC"></script>
   <script>
     console.log('🔍 GA Debug: Starting Google Analytics initialization');
     window.dataLayer = window.dataLayer || [];
@@ -28,11 +28,11 @@ export function getFullPageTemplate(styles: string, scripts: string): string {
       dataLayer.push(arguments);
     }
     gtag('js', new Date());
-    gtag('config', 'G-GHQ1RNLSQX', {
+    gtag('config', 'G-Y6C5H9KHEC', {
       debug_mode: true,
       send_page_view: true
     });
-    console.log('🔍 GA Debug: Google Analytics configured for G-GHQ1RNLSQX');
+    console.log('🔍 GA Debug: Google Analytics configured for G-Y6C5H9KHEC');
     
     // Test if gtag is working
     window.addEventListener('load', function() {
