@@ -72,8 +72,10 @@ export const layoutStyles = `
     display: block;
     margin-top: 1rem;
     color: var(--white);
-    text-decoration: underline;
-    font-size: 0.9rem;
+    font-family: 'Lobster', cursive;
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    text-decoration: none;
     transition: var(--transition);
   }
 
