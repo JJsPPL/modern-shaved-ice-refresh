@@ -68,6 +68,24 @@ export const layoutStyles = `
     margin-bottom: 0.5rem;
   }
 
+  .caters-link {
+    display: block;
+    margin-top: 1rem;
+    transition: var(--transition);
+  }
+
+  .caters-link:hover {
+    transform: scale(1.05);
+  }
+
+  .caters-logo {
+    width: 120px;
+    height: 60px;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+  }
+
   .sidebar p.tagline {
     font-size: 1rem;
     font-style: italic;
