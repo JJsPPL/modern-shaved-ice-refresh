@@ -71,19 +71,14 @@ export const layoutStyles = `
   .caters-link {
     display: block;
     margin-top: 1rem;
+    color: var(--white);
+    text-decoration: underline;
+    font-size: 0.9rem;
     transition: var(--transition);
   }
 
   .caters-link:hover {
-    transform: scale(1.05);
-  }
-
-  .caters-logo {
-    width: 120px;
-    height: 60px;
-    object-fit: contain;
-    border-radius: 8px;
-    box-shadow: var(--shadow-sm);
+    color: rgba(255, 255, 255, 0.8);
   }
 
   .sidebar p.tagline {
