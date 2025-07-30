@@ -71,16 +71,17 @@ export const layoutStyles = `
   .caters-link {
     display: block;
     margin-top: 1rem;
-    color: var(--white);
-    font-family: 'Lobster', cursive;
-    font-size: 2rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-    text-decoration: none;
     transition: var(--transition);
   }
 
   .caters-link:hover {
-    color: rgba(255, 255, 255, 0.8);
+    transform: scale(1.05);
+  }
+
+  .caters-logo {
+    width: 200px;
+    height: auto;
+    object-fit: contain;
   }
 
   .sidebar p.tagline {

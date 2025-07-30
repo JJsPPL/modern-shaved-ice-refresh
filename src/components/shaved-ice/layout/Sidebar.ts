@@ -12,11 +12,9 @@ export function getSidebarHTML(): string {
         <img src="/lovable-uploads/8a353321-e0e5-4d7f-9b67-877147c62617.png" alt="JJ's Shaved Ice Logo" class="logo-svg" />
       </div>
       
-      <h1>JJ's Shaved Ice & More</h1>
-      
       <!-- JJ's Caters Link -->
       <a href="https://JJsCaters.com" target="_blank" rel="noopener noreferrer" class="caters-link">
-        JJsCaters.com
+        <img src="/lovable-uploads/93a31b83-7dea-4f74-a06b-fac2f81330a1.png" alt="JJ's Caters" class="caters-logo" />
       </a>
     </div>
     
