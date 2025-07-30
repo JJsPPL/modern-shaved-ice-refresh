@@ -14,7 +14,7 @@ export function getSidebarHTML(): string {
       
       <!-- JJ's Caters Link -->
       <a href="https://JJsCaters.com" target="_blank" rel="noopener noreferrer" class="caters-link">
-        <img src="/lovable-uploads/93a31b83-7dea-4f74-a06b-fac2f81330a1.png" alt="JJ's Caters" class="caters-logo" />
+        <img src="/lovable-uploads/033217a9-9bec-4353-82a0-b671e9b72505.png" alt="JJ's Caters" class="caters-logo" />
       </a>
     </div>
     

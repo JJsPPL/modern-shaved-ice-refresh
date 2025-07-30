@@ -70,7 +70,8 @@ export const layoutStyles = `
 
   .caters-link {
     display: block;
-    margin-top: 1rem;
+    margin: 1rem auto 0;
+    text-align: center;
     transition: var(--transition);
   }
 
@@ -82,6 +83,7 @@ export const layoutStyles = `
     width: 200px;
     height: auto;
     object-fit: contain;
+    margin: 0 auto;
   }
 
   .sidebar p.tagline {
