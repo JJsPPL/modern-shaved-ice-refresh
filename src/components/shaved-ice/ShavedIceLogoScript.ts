@@ -25,7 +25,7 @@ function setupLogo(): void {
       logoImg.onerror = () => {
         console.error('Error loading logo, trying fallback');
         if (logoImg instanceof HTMLImageElement) {
-          logoImg.src = '/lovable-uploads/8a353321-e0e5-4d7f-9b67-877147c62617.png';
+          logoImg.src = '/images/8a353321-e0e5-4d7f-9b67-877147c62617.png';
         }
       };
     }

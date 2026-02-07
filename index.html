@@ -10,18 +10,10 @@
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y6C5H9KHEC"></script>
     <script>
-      console.log('🔍 GA Index Debug: Google Analytics loading from index.html');
       window.dataLayer = window.dataLayer || [];
-      function gtag(){
-        console.log('🔍 GA Index Debug: gtag called with:', arguments);
-        dataLayer.push(arguments);
-      }
+      function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-Y6C5H9KHEC', {
-        debug_mode: true,
-        send_page_view: true
-      });
-      console.log('🔍 GA Index Debug: Google Analytics configured');
+      gtag('config', 'G-Y6C5H9KHEC');
     </script>
     
     <!-- Google Fonts -->
@@ -33,7 +25,6 @@
   </head>
   <body>
     <div id="root"></div>
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

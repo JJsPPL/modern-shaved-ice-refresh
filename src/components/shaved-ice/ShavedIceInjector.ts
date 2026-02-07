@@ -51,7 +51,7 @@ export const injectShavedIceContent = (): void => {
   const preloadHeroImage = document.createElement('link');
   preloadHeroImage.rel = 'preload';
   preloadHeroImage.as = 'image';
-  preloadHeroImage.href = '/lovable-uploads/86260f6b-8644-47d2-b65e-20f606c12303.png';
+  preloadHeroImage.href = '/images/86260f6b-8644-47d2-b65e-20f606c12303.png';
   document.head.appendChild(preloadHeroImage);
   
   // Setup images for lightbox functionality with a slight delay to ensure DOM is ready

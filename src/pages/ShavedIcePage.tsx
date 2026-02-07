@@ -36,7 +36,7 @@ const ShavedIcePage: React.FC = () => {
             console.error('Hero image failed to load, attempting fallback');
             // If GitHub Pages has issues with the path, try a relative path
             if (isGitHubPages) {
-              heroImage.src = 'lovable-uploads/86260f6b-8644-47d2-b65e-20f606c12303.png';
+              heroImage.src = 'images/86260f6b-8644-47d2-b65e-20f606c12303.png';
             }
           };
           
@@ -54,7 +54,7 @@ const ShavedIcePage: React.FC = () => {
           logoImage.onerror = () => {
             console.error('Logo image failed to load, attempting fallback');
             if (isGitHubPages) {
-              logoImage.src = 'lovable-uploads/86260f6b-8644-47d2-b65e-20f606c12303.png';
+              logoImage.src = 'images/86260f6b-8644-47d2-b65e-20f606c12303.png';
             }
           };
           
